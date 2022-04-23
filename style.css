@@ -11,19 +11,16 @@ h1{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
-    .center {
+    center {
         text-align:center;
        }
     
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
-<<<<<<< HEAD
-=======
         color:seashell;
         font-size:300%;
         text-shadow: 1px 1px #605f79;
->>>>>>> f4fa0443263f3d2bc87e1b3ae9246d7b1c1a4fa6
         text-align:center;
     }
     
@@ -48,3 +45,11 @@ h1{
     
     }
      
+.navFeedback{
+    background-color: rgb(9, 50, 139);
+    overflow:hidden;
+    color:seashell;
+    font-size:300%;
+    text-shadow: 1px 1px #605f79;
+    text-align:center;
+}
