@@ -3,40 +3,81 @@
     <head>
 <meta charset="utf-8">
 <title>Aqua Gaming-Home</title>
-<link rel="stylesheet" href="styleJS.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    div.collapsed { display: none }
+</style>
+
 </head>
 <body>
+
 <header>
    <h1> Aqua Gaming</h1>
 </header>
 
-
 <div class="navSnake">
-<a class="active" href="snakeGame"><b>Snake Game</b></a>
+
+<a class="active" href="Index.html"><b>Home</b></a>    
+<a class="active" href="SnakeGame.html"><b>Snake Game</b></a>
+<a class="active" href="Feedback.html"><b>Feedback</b></a>
+
 </div>
 
-<h5>Description:</h5>
+<br>
+
+<a id="Description" class="text">
+    <center>
+        About us! 
+    </center>
+</a>
+
+<div id="divOne" class="collapsed text" style="font-size:150%;">
 <p>Aqua Gaming is a gaming organization that uses 50% of its
 funds gained from selling game titles to organizations 
 aimed to save our sea wildlife. This website will be used
- to promote games that will provide our organization with money in order for
-  it to be donated so we can save our oceans.</p>
+to promote games that will provide our organization with money in order for
+it to be donated so we can save our oceans.</p>
+<br>
+</div>
 
-<h1> hello KARIANANANNANAA </h1>
-<h2>fuck my life</h2>
+<br>
 
-</body>
 <footer>
     <b><i>
-        <a href="index.html">About us</a> &nbsp;&nbsp;
-        <a href="Snake ">Layout</a> &nbsp;&nbsp;
-
-
-
+        <a href="index.html">About us</a> 
+        <a href="Feedback.html">Feedback</a> 
+        <a href="Snake ">Layout</a> 
 </footer>
 
+</body>
 
+<script>
 
+//Description hover 
+let one = document.getElementById("Description");
+
+one.addEventListener("mouseover", function(){
+		show("divOne"); 
+	}, false)
+
+function show(id){
+		document.getElementById(id).style.display = "block";
+	}    
+
+one.addEventListener("mouseout", function(){
+		hide("divOne"); 
+	}, false)
+
+function hide(id){
+	document.getElementById(id).style.display = "none";
+		}
+//Description hover over
+
+</script>
+	 
+</body>
+</html>
 
 
 
