@@ -18,3 +18,50 @@
   </div>
   
 </body> 
+<script>
+let red=document.getElementById("nameinput");
+ red.addEventListener('focus',Red,false);
+function Red(){
+red.style.backgroundColor='red';
+
+}
+let yellow=document.getElementById("nameinput");
+yellow.addEventListener('blur',Yellow,false);
+ function Yellow(){
+   yellow.style.backgroundColor='yellow';
+
+
+   let print=document.getElementById("submit");
+   print=print.addEventListener("click",Print);
+function Print(){
+
+//Output
+//Name
+let p =document.getElementById("body");
+let nameInput=document.getElementById("nameinput").value;
+let name=document.createTextNode(nameInput);
+
+//Email
+let emailInput=document.getElementById("emailinput").value;
+let email=document.createTextNode(emailInput);
+
+//Phone
+let phoneInput=document.getElementById("phoneinput").value;
+let phone=document.createTextNode(phoneInput);
+
+//Br
+let e=document.createElement("br");
+let ee=document.createElement("br");
+
+p.appendChild(name);
+p.appendChild(e);
+p.appendChild(email);
+p.appendChild(ee);
+p.appendChild(phone);
+
+
+
+
+
+
+</script>
