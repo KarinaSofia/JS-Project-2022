@@ -16,9 +16,32 @@
   <a href="Index.html">Home</a>
 	<a href="SnakeGame.html">Snake Game</a>
   </div>
-  
+  <article>
+  <h2>Information(Optional)</h2>
+  <form>
+<fieldset id="info">
+  <label for="inputForm">
+ Name
+  <input type="text" id="inputForm" name="name" placeholder="name" />
+ </label>
+ <label for="email">
+   Email
+ <input type="text" id="email" name="email" placeholder="address@example.com" />
+</label>
+<fieldset id="submitbutton">
+  <input type="button" value="Submit" id="submit"/>
+</fieldset>
+</fieldset>
+</label>
+  </form>
+</article>
+
+
+
+  </article>
 
 <script>
+  //When entering something
 let purple=document.getElementById("nameinput");
  purple.addEventListener('focus',Purple,false);
 function Purple(){
@@ -26,7 +49,6 @@ purple.style.backgroundColor='purple';
 
 }
 function Print(){
-
 //Output
 //Name
 let p =document.getElementById("body");
@@ -51,7 +73,7 @@ p.appendChild(email);
 p.appendChild(ee);
 p.appendChild(phone);
 }
-}
+
 
 
 
