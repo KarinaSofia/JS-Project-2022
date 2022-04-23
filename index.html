@@ -40,6 +40,20 @@ it to be donated so we can save our oceans.</p>
 </div>
 
 <br>
+<h2> Game Shop </h2>
+<a id="shop" class="center">
+    Why shop with us?
+</a> 
+<div id="divTwo" class="collapsed text" style="font-size:150%;">
+    <p>Aqua Gaming is a gaming organization that uses 50% of its
+    funds gained from selling game titles to organizations 
+    aimed to save our sea wildlife. This website will be used
+    to promote games that will provide our organization with money in order for
+    it to be donated so we can save our oceans.</p>
+    <br>
+    </div>
+
+<br>
 
 <footer>
     <b><i>
@@ -54,16 +68,23 @@ it to be donated so we can save our oceans.</p>
 
 //Description hover 
 let one = document.getElementById("Description");
+let two = document.getElementById("shop");
 
 one.addEventListener("mouseover", function(){
 		show("divOne"); 
 	}, false)
+two.addEventListener("mouseover", function(){
+		show("divTwo"); 
+	}, false)    
 
 function show(id){
 		document.getElementById(id).style.display = "block";
 	}    
 
 one.addEventListener("mouseout", function(){
+		hide("divOne"); 
+	}, false)
+two.addEventListener("mouseout", function(){
 		hide("divOne"); 
 	}, false)
 
