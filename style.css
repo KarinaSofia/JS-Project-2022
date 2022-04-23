@@ -24,11 +24,11 @@ h1{
         overflow:hidden;
     }
     
-    .text {color:#CDBBA7;
-		border-style:solid;
-		border-radius:30px;
-		border-color:#605f79;
-		text-shadow: 5px 5px #605f79;}
+    .text {color:seashell;
+		text-shadow: 1px 1px #605f79;
+        text-align:center;
+        font-size:200%;
+    }
 
     .navSnake a{
         float:left;
