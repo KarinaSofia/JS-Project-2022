@@ -9,12 +9,6 @@ h1{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
-    
-    ul{list-style:none;
-        margin: 0;
-        padding:0;
-    }
-
     .center {
         text-align:center;
        }
@@ -22,6 +16,7 @@ h1{
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
+        text-align:center;
     }
     
     .navSnake a{
