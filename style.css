@@ -24,6 +24,10 @@ h1{
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
+        color:seashell;
+        font-size:300%;
+        text-shadow: 1px 1px #605f79;
+        text-align:center;
     }
     
     .text {color:seashell;
