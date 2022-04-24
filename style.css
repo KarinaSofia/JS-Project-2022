@@ -9,6 +9,8 @@ h1{
     body{
        background:linear-gradient(#66b3ff,#4da6ff);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 5%;
+        margin-right: 5%;
         
     }
     center {
