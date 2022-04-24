@@ -16,6 +16,8 @@
   <a href="Index.html">Home</a>
 	<a href="SnakeGame.html">Snake Game</a>
   </div>
+
+
   <article>
   <h2>Information(Optional)</h2>
   <form>
@@ -26,10 +28,10 @@
  </label>
  <label for="email">
    Email
- <input type="text" id="email" name="email" placeholder="address@example.com" />
+ <input type="text" id="emailForm" name="email" placeholder="address@example.com" />
 </label>
 <fieldset id="submitbutton">
-  <input type="button" value="Submit" id="submit"/>
+  <input type="button" value="Submit" id="enter"/>
 </fieldset>
 </fieldset>
 </label>
@@ -42,26 +44,26 @@
 
 <script>
   //When entering something
-let purple=document.getElementById("nameinput");
- purple.addEventListener('focus',Purple,false);
-function Purple(){
-purple.style.backgroundColor='purple';
+let blue=document.getElementById("inputForm");
+ blue.addEventListener('blur',Blue,false);
+function Blue(){
+blue.style.backgroundColor='blue';
 
-}
+let print=document.getElementById("enter");
+print=print.addEventListener("click",Print);
+
 function Print(){
 //Output
 //Name
-let p =document.getElementById("body");
-let nameInput=document.getElementById("nameinput").value;
-let name=document.createTextNode(nameInput);
+let insert =document.getElementById("body");
+let inputForm=document.getElementById("inputForm").value;
+let name=document.createTextNode(inputForm);
 
 //Email
-let emailInput=document.getElementById("emailinput").value;
-let email=document.createTextNode(emailInput);
+let emailForm=document.getElementById("emailForm").value;
+let email=document.createTextNode(emailForm);
 
-//Phone
-let phoneInput=document.getElementById("phoneinput").value;
-let phone=document.createTextNode(phoneInput);
+
 
 //Br
 let e=document.createElement("br");
@@ -71,9 +73,9 @@ p.appendChild(name);
 p.appendChild(e);
 p.appendChild(email);
 p.appendChild(ee);
-p.appendChild(phone);
-}
 
+}
+}
 
 
 
