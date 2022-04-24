@@ -5,28 +5,28 @@ h1{
     text-shadow: 1px 1px #605f79;
     text-align:center;
     }
-<<<<<<< HEAD
 
  h2{
 text-align: center;
 color:darkslateblue;
 border-bottom:5px solid white;
 }
-=======
->>>>>>> 28d123175f07d86c620c4780434442a7676b164d
     
     body{
        background:linear-gradient(#66b3ff,#4da6ff);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
-    .center {
+    center {
         text-align:center;
        }
     
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
+        color:seashell;
+        font-size:300%;
+        text-shadow: 1px 1px #605f79;
         text-align:center;
     }
     
@@ -51,3 +51,23 @@ border-bottom:5px solid white;
     
     }
      
+.navFeedback{
+    background-color: rgb(9, 50, 139);
+    overflow:hidden;
+    color:seashell;
+    text-shadow: 1px 1px #605f79;
+    text-align:center;
+}
+
+.navFeedback a{
+    float:left;
+    padding-top:14px 16px;
+    font-size:20px;
+    text-decoration:none;
+    min-width:500px;
+    color:aliceblue;
+}
+footer{
+    border-style:double;
+    border-color:aliceblue;
+}
