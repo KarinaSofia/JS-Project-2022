@@ -10,11 +10,10 @@ h1{
 text-align: center;
 color:darkslateblue;
 border-bottom:5px solid white;
-
-    }
+}
     
     body{
-        background-color: rgb(99, 155, 219);
+       background:linear-gradient(#66b3ff,#4da6ff);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
