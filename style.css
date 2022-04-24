@@ -8,11 +8,14 @@ h1{
     
     body{
        background:linear-gradient(#66b3ff,#4da6ff);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding-left: 5%;
-        padding-right: 5%;
-        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;  
     }
+
+    main{
+        padding-left: 5%;
+        padding-right: 5%; 
+    }
+
     center {
         text-align:center;
        }
