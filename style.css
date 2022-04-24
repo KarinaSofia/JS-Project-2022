@@ -30,6 +30,11 @@ h1{
         font-size:200%;
     }
 
+.sub-title{color:seashell;
+		text-shadow: 2px 2px #605f79;
+        font-size:170%;
+}
+
     .navSnake a{
         float:left;
         padding-top:14px 16px;
