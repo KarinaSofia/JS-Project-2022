@@ -5,6 +5,13 @@ h1{
     text-shadow: 1px 1px #605f79;
     text-align:center;
     }
+
+ h2{
+text-align: center;
+color:darkslateblue;
+border-bottom:5px solid white;
+
+    }
     
     body{
         background-color: rgb(99, 155, 219);
@@ -60,4 +67,8 @@ h1{
     text-decoration:none;
     min-width:500px;
     color:aliceblue;
+}
+footer{
+    border-style:double;
+    border-color:aliceblue;
 }
