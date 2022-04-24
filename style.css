@@ -5,29 +5,19 @@ h1{
     text-shadow: 1px 1px #605f79;
     text-align:center;
     }
-
- h2{
-text-align: center;
-color:darkslateblue;
-border-bottom:5px solid white;
-
-    }
     
     body{
         background-color: rgb(99, 155, 219);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
-    center {
+    .center {
         text-align:center;
        }
     
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
-        color:seashell;
-        font-size:300%;
-        text-shadow: 1px 1px #605f79;
         text-align:center;
     }
     
@@ -52,23 +42,3 @@ border-bottom:5px solid white;
     
     }
      
-.navFeedback{
-    background-color: rgb(9, 50, 139);
-    overflow:hidden;
-    color:seashell;
-    text-shadow: 1px 1px #605f79;
-    text-align:center;
-}
-
-.navFeedback a{
-    float:left;
-    padding-top:14px 16px;
-    font-size:20px;
-    text-decoration:none;
-    min-width:500px;
-    color:aliceblue;
-}
-footer{
-    border-style:double;
-    border-color:aliceblue;
-}
