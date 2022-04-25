@@ -52,10 +52,10 @@ With your support we can save the remaining sea life!
 </center>
 
 <div class="row" >
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnautica.png"  alt="subnautica">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
+    <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnautica.png"  alt="subnautica">
+    <img id="image2" class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
+    <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
+    <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
 </div>
 
 <a id="shop" class="text">
@@ -88,6 +88,10 @@ With your support we can save the remaining sea life!
 //Description hover 
 let one = document.getElementById("Description");
 let two = document.getElementById("shop");
+let three = document.getElementById("imagedes1");
+let four = document.getElementById("imagedes2");
+let five = document.getElementById("imagedes3");
+let six = document.getElementById("imagedes4");
 
 one.addEventListener("mouseover", function(){
 		show("divOne"); 
@@ -96,6 +100,7 @@ two.addEventListener("mouseover", function(){
 		show("divTwo"); 
 	}, false)    
 
+    // show function
 function show(id){
 		document.getElementById(id).style.display = "block";
 	}    
@@ -107,6 +112,7 @@ two.addEventListener("mouseout", function(){
 		hide("divTwo"); 
 	}, false)
 
+    //hide function 
 function hide(id){
 	document.getElementById(id).style.display = "none";
 		}
