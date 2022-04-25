@@ -60,15 +60,15 @@ blue.style.backgroundColor='blue';
 
 
 
-let li=document.createElement('li');
+
   
-  li.appendChild(text);
-  document.getElementById("ordered").appendChild(li);
+ 
+  
+let li=document.createElement('li');
 
-let comment=document.getElementById("comment");
-comment.addEventListener("click",Print);
-  let commentBox=document.getElementById("comment-box").value;
-
+let comment1=document.getElementById("enter");
+comment1=comment1.addEventListener("click",Print);
+ 
 
 function Print(){
 //Output
@@ -94,8 +94,8 @@ insert.appendChild(name);
 insert.appendChild(e1);
 insert.appendChild(email);
 insert.appendChild(e2);
-insert.appendChild(text);
-
+insert.appendChild(text)
+document.getElementById("enter").appendChild(li);
 
 
 
