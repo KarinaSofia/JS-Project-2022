@@ -8,9 +8,14 @@ h1{
     
     body{
        background:linear-gradient(#66b3ff,#4da6ff);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;  
     }
+
+    main{
+        padding-left: 5%;
+        padding-right: 5%; 
+    }
+
     center {
         text-align:center;
        }
@@ -29,6 +34,11 @@ h1{
         text-align:center;
         font-size:200%;
     }
+
+.sub-title{color:seashell;
+		text-shadow: 2px 2px #605f79;
+        font-size:200%;
+}
 
     .navSnake a{
         float:left;
