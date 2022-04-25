@@ -32,22 +32,15 @@
    Email
  <input type="text" id="emailForm" name="email" placeholder="address@example.com" />
 </label>
-</fieldset>
-<fieldset id="submitbutton">
+<label for="comments">
+  <label for="inputForm">
+    Comment
+  <input type="text" id="comment-box" name="comment" placeholder="comment here" />
+ </label>
+ <fieldset id="submitbutton">
   <input type="button" value="comment" id="enter"/>
-</fieldset>
-<fieldset id="comments">
-<input type="text" id="comment-box" placeholder="Insert a comment">
-<ul id="ordered">
-</ul>
-
 </label>
-
-  
 </fieldset>
-
-
-
 </label>
   </form>
   </article>
@@ -67,29 +60,31 @@ blue.style.backgroundColor='blue';
 
 
 
-//Comment box
+let li=document.createElement('li');
+  
+  li.appendChild(text);
+  document.getElementById("ordered").appendChild(li);
+
 let comment=document.getElementById("comment");
 comment.addEventListener("click",Print);
   let commentBox=document.getElementById("comment-box").value;
 
 
-
 function Print(){
 //Output
-let li=document.createElement('li');
-  let text=document.createTextNode(commentBox);
-  li.appendChild(text);
-  document.getElementById("ordered").appendChild(li);
-
-
-//Name
 let insert =document.getElementById("body");
+//Name
 let inputForm=document.getElementById("inputForm").value;
 let name=document.createTextNode(inputForm);
 
 //Email
 let emailForm=document.getElementById("emailForm").value;
 let email=document.createTextNode(emailForm);
+
+//CommentBox
+let comment=document.getElementById("comment").value;
+let text=document.createTextNode(commentBox);
+
 
 //Br
 let e1=document.createElement("br");
@@ -99,6 +94,7 @@ insert.appendChild(name);
 insert.appendChild(e1);
 insert.appendChild(email);
 insert.appendChild(e2);
+insert.appendChild(text);
 
 
 
