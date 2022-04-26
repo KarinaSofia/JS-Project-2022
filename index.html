@@ -125,10 +125,20 @@ six.addEventListener("click", function(){
 		show("imagedes4"); 
 	}, false) 
 
+    three.addEventListener("click", function(){
+		hide("imagedes1"); 
+	}, false) 
+
+    
+
     // show function
 function show(id){
 		document.getElementById(id).style.display = "block";
-	}    
+	} 
+    
+    function hide (id){
+        document.getElementById(id).style.display = "none";
+    }
 
 one.addEventListener("mouseout", function(){
 		hide("divOne"); 
