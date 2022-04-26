@@ -20,6 +20,14 @@ h1{
         text-align:center;
        }
     
+    .bag{
+        background-color:rgb(0, 80, 155);
+        color:seashell;
+        font-size:300%;
+        text-shadow: 1px 1px #605f79;
+        text-align:center;
+    }
+
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
