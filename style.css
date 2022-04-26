@@ -20,14 +20,6 @@ h1{
         text-align:center;
        }
     
-    .bag{
-        background-color:rgb(0, 80, 155);
-        color:seashell;
-        font-size:300%;
-        text-shadow: 1px 1px #605f79;
-        text-align:center;
-    }
-
     .navSnake{
         background-color: rgb(9, 50, 139);
         overflow:hidden;
@@ -50,6 +42,7 @@ h1{
         box-sizing: border-box;
       }
       
+      
       #snakeTitle {
         text-align: center;
         font-size: 32px;
@@ -58,7 +51,8 @@ h1{
         color: black;
       }
       
-      #snakeTable {
+      
+      .snakeTable {
         width: 210px;
         height: 230px;
         margin: auto;
@@ -68,12 +62,24 @@ h1{
         flex-wrap: wrap;
         box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
       }
+      @media only screen and (min-width: 768px) {
+        .snakeTable {
+          width: 315px;
+          height: 345px;
+        }
+      }
       
       .box {
         background: white;
         border: solid 1px #16a085;
         width: 10px;
         height: 10px;
+      }
+      @media only screen and (min-width: 768px) {
+        .box {
+          width: 15px;
+          height: 15px;
+        }
       }
       
       .food {
@@ -84,6 +90,7 @@ h1{
         background: #16a085;
       }
       
+      /* bar showing status below table */
       .status {
         background: white;
         color: #16a085;
@@ -91,16 +98,30 @@ h1{
         width: 210px;
         height: 20px;
       }
+      @media only screen and (min-width: 768px) {
+        .status {
+          width: 315px;
+          height: 30px;
+        }
+      }
       
       .score {
         float: right;
         padding: 0 5px;
         line-height: 20px;
       }
+      @media only screen and (min-width: 768px) {
+        .score {
+          padding: 0 10px;
+          line-height: 30px;
+          font-size: 20px;
+        }
+      }
       
       .hidden {
         display: none !important;
       }
+      
       
       .modul {
         display: flex;
@@ -115,14 +136,12 @@ h1{
         background: rgba(0,0,0,0.5);
         text-align: center;
       }
-      
       .start {
         background: rgba(256,256,256,1);
         padding: 60px;
         box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
         border-radius: 2px;
       }
-      
       .start span {
         color: #16a085;
         border: 1px solid;
@@ -131,7 +150,6 @@ h1{
         font-size: 20px;
         cursor: pointer;
       }
-      
       .start span:hover {
         background: #16a085;
         color: white;
