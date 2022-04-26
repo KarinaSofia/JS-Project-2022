@@ -38,12 +38,9 @@
   <label for="inputForm">
     Comment
   <input type="text" id="comment-box" placeholder="comment here" />
-<ul id="unordered">
-  </ul>
 
 </label>
 
- <button id="submitbutton">
   <input type="button" value="comment" id="enter"/>
 </label>
 
@@ -51,22 +48,38 @@
 </fieldset>
 </label>
   </form>
-  </article>
+  <ul id="unordered">
+  </ul>
 
+  </article>
+<div id="o1">
+</div>
 
 
 
 
 <script>
+  //Color
+  //When entering something
+let blue=document.getElementById("inputForm");
+ blue.addEventListener('blur',Blue(),false);
+function Blue(){
+blue.style.backgroundColor='blue';
 
-let comment1=document.getElementById("submitbutton");
-comment1.addEventListener("click",Print);
-li.appendChild(text);
+
+}
+
+
+let functionEnter=document.getElementById("enter");
+functionEnter.addEventListener("click",function(){
+  Print();
+},false);
+
 
 //Output
 function Print(){
-
-let insert =document.getElementById("body");
+//console.log(1);
+let insert =document.getElementById("o1");
 //Name
 let inputForm=document.getElementById("inputForm").value;
 let name=document.createTextNode(inputForm);
@@ -80,7 +93,7 @@ let email=document.createTextNode(emailForm);
 
  let commentBox=document.getElementById("comment-box").value;
 let text=document.createTextNode(commentBox);
-document.getElementById("unordered").appendChild(li);
+
 
 
 
@@ -95,12 +108,12 @@ insert.appendChild(email);
 insert.appendChild(e2);
 
 
-
+document.getElementById("unordered").appendChild(li);
 
 
 
 }
-}
+
 </script>
 </body> 
 </html>

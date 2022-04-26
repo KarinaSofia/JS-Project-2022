@@ -52,11 +52,55 @@ With your support we can save the remaining sea life!
 </center>
 
 <div class="row" >
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnautica.png"  alt="subnautica">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
-    <img class="img-fluid d-none d-md-block" style="margin:2%;" width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
+    <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" 
+    width="275" height="350" src="Subnautica.png"  alt="subnautica">
+    <div id="imagedes1" class="collapsed text" style="font-size:90%;">
+        <input type="checkbox" id="item1" value="1099" />
+        <label for="sub1">Buy Subnautica</label>
+    </div>
+
+    <img id="image2" class="img-fluid d-none d-md-block" style="margin:2%;" 
+    width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
+    <div id="imagedes2" class="collapsed text" style="font-size:90%;">
+        <input type="checkbox" id="item2" value="1099" />
+        <label for="sub2">Buy Subnautica Below Zero</label>
+    </div>
+
+    <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" 
+    width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
+    <div id="imagedes3" class="collapsed text" style="font-size:90%;">
+        <input type="checkbox" id="item3" value="1599" />
+        <label for="sub1">Buy Sea Of Theives</label>
+    </div>
+
+    <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" 
+    width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
+    <div id="imagedes4" class="collapsed text" style="font-size:90%;">
+        <input type="checkbox" id="item[4" value="1599" />
+        <label for="sub1">Buy Song Of The Deep</label>
+    </div>
+
 </div>
+
+
+<input type="button" value="Calculate" id="sButton" onclick="calculate()">
+
+<table class="bag">
+    <colgroup>
+       <col class="label" />
+       <col class="amount" />
+    </colgroup>
+    <tbody>
+       <tr>
+          <td>Bag Total</td>
+          <td>0.00</td>
+       </tr>
+       <tr>
+          <td>Donation</td>
+          <td>0.00</td>
+       </tr>
+    </tbody>
+ </table>
 
 <a id="shop" class="text">
     <b>Why shop with us?</b>
@@ -88,6 +132,10 @@ With your support we can save the remaining sea life!
 //Description hover 
 let one = document.getElementById("Description");
 let two = document.getElementById("shop");
+let three = document.getElementById("image1");
+let four = document.getElementById("image2");
+let five = document.getElementById("image3");
+let six = document.getElementById("image4");
 
 one.addEventListener("mouseover", function(){
 		show("divOne"); 
@@ -95,7 +143,20 @@ one.addEventListener("mouseover", function(){
 two.addEventListener("mouseover", function(){
 		show("divTwo"); 
 	}, false)    
+three.addEventListener("click", function(){
+		show("imagedes1"); 
+	}, false) 
+four.addEventListener("click", function(){
+		show("imagedes2"); 
+	}, false) 
+five.addEventListener("click", function(){
+		show("imagedes3"); 
+	}, false) 
+six.addEventListener("click", function(){
+		show("imagedes4"); 
+	}, false) 
 
+    // show function
 function show(id){
 		document.getElementById(id).style.display = "block";
 	}    
@@ -107,9 +168,30 @@ two.addEventListener("mouseout", function(){
 		hide("divTwo"); 
 	}, false)
 
+    //hide function 
 function hide(id){
 	document.getElementById(id).style.display = "none";
 		}
+
+// bag function 
+function calculate(){
+      let items = document.getElementsByTagName("input");
+      let cells = document.getElementsByTagName("td");
+      const donations = 0.1;
+      let total = 0;
+	  let totalDonations = 0;
+		
+		for(i = 0; i < items.length; i++){
+			if(items[i].checked){
+				total += parseFloat(items[i].value) / 100;
+			}
+		}
+		
+		totalDonations = total * donations;
+		
+		cells[1].textContent = total.toFixed(2);
+		cells[3].textContent = totalDonations.toFixed(2);
+   }
 
 </script>
 	 
