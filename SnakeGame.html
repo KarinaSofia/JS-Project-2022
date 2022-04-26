@@ -12,7 +12,7 @@
    <header id="snakeTitle">SNAKE</header>
 
    
-   <section id="snakeTable"></section>
+   <section class="snakeTable"></section>
    
    
    <section class="modul">
@@ -24,17 +24,17 @@
  
 
  <script>
-   let snakeTable = document.querySelector(".snakeTable");
-let boxes = document.getElementsByClassName("box");
-let modul = document.querySelector(".modul");
-let start = document.querySelector(".start");
+   var snakeTable = document.querySelector(".snakeTable");
+var boxes = document.getElementsByClassName("box");
+var modul = document.querySelector(".modul");
+var start = document.querySelector(".start");
 
-let table = {
+var table = {
  rowsCols: 21,
  boxes: 21*21
 };
 
-let snake = {
+var snake = {
  direction: "right",
  position: [[6,10], [7,10], [8,10], [9,10], [10,10]],
  interval: 200,
@@ -110,7 +110,7 @@ function updatePositions() {
  boxes[snake.position[0][0] + snake.position[0][1] * table.rowsCols].classList.remove("snake");
  snake.position.shift();
  
- let head = snake.position[snake.position.length - 1];
+ var head = snake.position[snake.position.length - 1];
  switch (snake.direction) {
    case "left":
      snake.position.push([head[0] - 1, head[1]]);
@@ -131,7 +131,7 @@ function updatePositions() {
 
 
 function hitBorder() {
- let headPos = snake.position.length-1;
+ var headPos = snake.position.length-1;
  
  if (((snake.position[headPos][0] === table.rowsCols-1) && (snake.direction === "right")) || ((snake.position[headPos][0] === 0) && (snake.direction === "left")) || ((snake.position[headPos][1] === table.rowsCols-1) && (snake.direction === "down")) ||  ((snake.position[headPos][1] === 0) && (snake.direction === "up"))) {
    
@@ -141,7 +141,7 @@ function hitBorder() {
 
 
 function hitSnake() {
- let headPos = snake.position.length-1;
+ var headPos = snake.position.length-1;
  for (var i=0; i<headPos; i++) {
    if (snake.position[headPos].toString() === snake.position[i].toString()) {
      
@@ -152,8 +152,8 @@ function hitSnake() {
 
 
 function hitFood() {
- let head = snake.position[snake.position.length-1];
- let tail = snake.position[0];
+ var head = snake.position[snake.position.length-1];
+ var tail = snake.position[0];
  if (head.toString() === foodPos.toString()) {
    boxes[random].classList.remove("food");
    snake.position.unshift(tail);
@@ -172,8 +172,8 @@ function hitFood() {
 
 
 function randomFood() {
- let randomX = Math.floor(Math.random() * table.rowsCols);
- let randomY = Math.floor(Math.random() * table.rowsCols);
+ var randomX = Math.floor(Math.random() * table.rowsCols);
+ var randomY = Math.floor(Math.random() * table.rowsCols);
  random = randomX + randomY * table.rowsCols;
  
  while (boxes[random].classList.contains("snake")) {
@@ -187,7 +187,7 @@ function randomFood() {
 
 
 function renderSnake() {
- for (let i=0; i<snake.position.length; i++) {
+ for (var i=0; i<snake.position.length; i++) {
    boxes[snake.position[i][0] + snake.position[i][1] * table.rowsCols].classList.add("snake");
  }
 }
@@ -226,8 +226,8 @@ function turn(e) {
 function tableCreation() {
  if (snakeTable.innerHTML === "") {
   
-   for (let i = 0; i<table.boxes; i++) {
-     let divElt = document.createElement("div");
+   for (var i = 0; i<table.boxes; i++) {
+     var divElt = document.createElement("div");
      divElt.classList.add("box");
      snakeTable.appendChild(divElt);
    }
@@ -267,16 +267,16 @@ $("document").ready(function() {
 (function($) {
  $.fn.swipeDetector = function(options) {
    
-   let swipeState = 0;
+   var swipeState = 0;
    
-   let startX = 0;
-   let startY = 0;
+   var startX = 0;
+   var startY = 0;
    
-   let pixelOffsetX = 0;
-   let pixelOffsetY = 0;
+   var pixelOffsetX = 0;
+   var pixelOffsetY = 0;
  
-   let swipeTarget = this;
-   let defaultSettings = {
+   var swipeTarget = this;
+   var defaultSettings = {
    
      swipeThreshold: 30,
     
@@ -329,8 +329,6 @@ $("document").ready(function() {
      }
    }
 
- 
-
    function swiping(event) {
 
      if (swipeState !== 1) return;
@@ -339,8 +337,8 @@ $("document").ready(function() {
        event = event.originalEvent.touches[0];
      }
 
-     let swipeOffsetX = event.clientX - startX;
-     let swipeOffsetY = event.clientY - startY;
+     var swipeOffsetX = event.clientX - startX;
+     var swipeOffsetY = event.clientY - startY;
 
      if (
        Math.abs(swipeOffsetX) > options.swipeThreshold ||
@@ -356,7 +354,7 @@ $("document").ready(function() {
  };
 })(jQuery);
 
-+
+
 function preventDefault(e){e.preventDefault();}
 function disableScroll(){
    document.body.addEventListener('touchmove', preventDefault, { passive: false });
