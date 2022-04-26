@@ -82,6 +82,9 @@ With your support we can save the remaining sea life!
 
 </div>
 
+
+<input type="button" value="Calculate" id="sButton" onclick="calculate()">
+
 <table class="bag">
     <colgroup>
        <col class="label" />
@@ -174,9 +177,9 @@ function hide(id){
 function calculate(){
       let items = document.getElementsByTagName("input");
       let cells = document.getElementsByTagName("td");
-      const donations = 0.05;
+      const donations = 0.1;
       let total = 0;
-	  let taxes = 0;
+	  let totalDonations = 0;
 		
 		for(i = 0; i < items.length; i++){
 			if(items[i].checked){
@@ -184,10 +187,10 @@ function calculate(){
 			}
 		}
 		
-		taxes = total * donations;
+		totalDonations = total * donations;
 		
 		cells[1].textContent = total.toFixed(2);
-		cells[3].textContent = taxes.toFixed(2);
+		cells[3].textContent = totalDonations.toFixed(2);
    }
 
 </script>
