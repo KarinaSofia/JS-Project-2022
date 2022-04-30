@@ -76,7 +76,7 @@ h1{
       
       .box {
         background: white;
-        border: solid 1px #16a085;
+        border: solid 1px darkblue;
         width: 10px;
         height: 10px;
       }
@@ -92,14 +92,14 @@ h1{
       }
       
       .snake {
-        background: #16a085;
+        background: darkblue;
       }
       
       /* bar showing status below table */
       .status {
         background: white;
-        color: #16a085;
-        border: solid 1px #16a085;
+        color: darkblue;
+        border: solid 1px darkblue;
         width: 210px;
         height: 20px;
       }
@@ -132,13 +132,13 @@ h1{
         text-align: center;
       }
       .start {
-        background-color: white;
+        background-color: darkblue;
         padding: 30px;
         box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
         border-radius: 2px;
       }
       .start span {
-        color: #16a085;
+        color: white;
         border: 1px solid;
         border-radius: 2px;
         padding: 10px 20px;
@@ -146,7 +146,7 @@ h1{
         cursor: pointer;
       }
       .start span:hover {
-        background: #16a085;
+        background: lightblue;
         color: white;
       }
     .text {color:seashell;
