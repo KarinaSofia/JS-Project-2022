@@ -135,9 +135,9 @@ h1{
         text-align: center;
       }
       .start {
-        background: rgba(256,256,256,1);
+        background-color: white;
         padding: 10px;
-        box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
+        box-shadow: 0 0 2px 3px black;
         border-radius: 2px;
       }
       .start span {
