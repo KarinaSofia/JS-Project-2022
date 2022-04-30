@@ -127,9 +127,6 @@ h1{
         display: none;
       }
       
-      .column {
-        float: left;
-      }
 
       #modul {
         align-items: center;
