@@ -250,28 +250,6 @@ if (snakeTable.innerHTML === "") {
 }
 }
 
-$("document").ready(function() {
-$("body")
-  .swipeDetector()
-  .on("swipeLeft.sd swipeRight.sd swipeUp.sd swipeDown.sd", function(event) {
-    if (event.type === "swipeLeft") {
-      if (snake.direction === "right") return;
-      snake.direction = "left";
-    } else if (event.type === "swipeRight") {
-      if (snake.direction === "left") return;
-      snake.direction = "right";
-    } else if (event.type === "swipeUp") {
-      if (snake.direction === "down") return;
-      snake.direction = "up";
-    } else if (event.type === "swipeDown") {
-      if (snake.direction === "up") return;
-      snake.direction = "down";
-    }
-    snake.canTurn = 0;
-  });
-});
-
-
 (function($) {
 $.fn.swipeDetector = function(options) {
   
