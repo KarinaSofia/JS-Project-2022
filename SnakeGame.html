@@ -76,14 +76,6 @@ snake.init();
 
 start.addEventListener("click", startGame);
 
-/*
-document.addEventListener("keydown", function(e) {
-if (e.keyCode === 13 && snake.time === 0) {
-  startSnake();
-}
-});
-*/
-
 function startGame() {
 modul.classList.add("hidden");
 
@@ -298,18 +290,6 @@ $.fn.swipeDetector = function(options) {
    
     useOnlyTouch: true
   };
-
-  /*
-
-  (function init() {
-    options = $.extend(defaultSettings, options);
-  
-    swipeTarget.on("mousedown touchstart", swipeStart);
-    $("html").on("mouseup touchend", swipeEnd);
-    $("html").on("mousemove touchmove", swiping);
-  })();
-
-  */
 
   function swipeStart(event) {
     if (options.useOnlyTouch && !event.originalEvent.touches) return;
