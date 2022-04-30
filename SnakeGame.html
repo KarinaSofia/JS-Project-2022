@@ -27,7 +27,7 @@
     
     </div>
 
-  <header id="snakeTitle">SNAKE</header>
+  <header id="snakeTitle">SNAKE GAME</header>
 
 
     <div class="start" id="modul">
@@ -330,17 +330,6 @@ $.fn.swipeDetector = function(options) {
   return swipeTarget; 
 };
 })(jQuery);
-
-
-function preventDefault(e){e.preventDefault();}
-function disableScroll(){
-  document.body.addEventListener('touchmove', preventDefault, { passive: false });
-}
-function enableScroll(){
-  document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-}
-disableScroll();
-
   
 </script>
 </body>
