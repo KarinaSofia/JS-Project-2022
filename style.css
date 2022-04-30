@@ -131,14 +131,12 @@ h1{
       }
       
       .modul {
-        
         align-items: center;
-        
         text-align: center;
       }
       .start {
         background: rgba(256,256,256,1);
-        padding: 60px;
+        padding: 10px;
         box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
         border-radius: 2px;
       }
