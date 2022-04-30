@@ -135,8 +135,7 @@ h1{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 50%;
-        width: 50%;
+        
         text-align: center;
       }
       .start {
