@@ -111,12 +111,12 @@ With your support we can save the remaining sea life!
         </colgroup>
         <tbody>
         <tr>
-            <td>Bag Total</td>
-            <td>0.00</td>
+            <td id="tdId">Bag Total</td>
+            <td id="tdId">0.00</td>
         </tr>
         <tr>
-            <td>Donation</td>
-            <td>0.00</td>
+            <td id="tdId">Donation</td>
+            <td id="tdId">0.00</td>
         </tr>
         </tbody>
     </table>
@@ -198,7 +198,7 @@ function hide(id){
 // bag function 
 function calculate(){
       let items = document.getElementsByTagName("input");
-      let cells = document.getElementsByTagName("td");
+      let cells = document.getElementsById("tdId");
       const donations = 0.4;
       let total = 0;
 	  let totalDonations = 0;
