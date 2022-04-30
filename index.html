@@ -51,6 +51,7 @@ With your support we can save the remaining sea life!
 <h2 class="sub-title"> Aqua Game Shop </h2>
 </center>
 
+
 <div class="row" >
     <div class="column">
         <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" 
@@ -68,7 +69,7 @@ With your support we can save the remaining sea life!
         <input type="checkbox" id="item2" value="1099" />
         <label for="sub2">Buy Subnautica Below Zero</label>
         </div>
-    </div>    
+    </div>  
 
     <div class="column">
         <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" 
@@ -79,48 +80,49 @@ With your support we can save the remaining sea life!
         </div>
     </div>
 
-
     <div class="column">
         <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" 
         width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
         <div id="imagedes4" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item[4" value="1599" />
         <label for="sub1">Buy Song Of The Deep</label>
-        </div>
+        </div>  
     </div>
+
 </div>
 
+<div class="row">
+    <input type="button" value="Calculate" id="sButton" onclick="calculate()">
 
-<input type="button" value="Calculate" id="sButton" onclick="calculate()">
+    <table class="bag">
+        <colgroup>
+        <col class="label" />
+        <col class="amount" />
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>Bag Total</td>
+            <td>0.00</td>
+        </tr>
+        <tr>
+            <td>Donation</td>
+            <td>0.00</td>
+        </tr>
+        </tbody>
+    </table>
 
-<table class="bag">
-    <colgroup>
-       <col class="label" />
-       <col class="amount" />
-    </colgroup>
-    <tbody>
-       <tr>
-          <td>Bag Total</td>
-          <td>0.00</td>
-       </tr>
-       <tr>
-          <td>Donation</td>
-          <td>0.00</td>
-       </tr>
-    </tbody>
- </table>
-
-<a id="shop" class="text">
-    <b>Why shop with us?</b>
-</a> 
-<div id="divTwo" class="collapsed text" style="font-size:90%;">
-    <p>Aqua Gaming knows how much you like our oceans and gaming! 
-        By buying your favorite games through us, a percentage of your purchase
-        will be donated to organisations that help protect and restore our oceans. 
-        To learn more about the organisations we support head
-        to the About us! section. 
-    </p>
-    <br>
+    <a id="shop" class="text">
+        <b>Why shop with us?</b>
+    </a> 
+    <div id="divTwo" class="collapsed text" style="font-size:90%;">
+        <p>Aqua Gaming knows how much you like our oceans and gaming! 
+            By buying your favorite games through us, a percentage of your purchase
+            will be donated to organisations that help protect and restore our oceans. 
+            To learn more about the organisations we support head
+            to the About us! section. 
+        </p>
+        <br>
+    </div>
 </div>
 
 </main>
