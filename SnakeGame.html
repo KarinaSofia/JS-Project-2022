@@ -106,11 +106,12 @@ setTimeout(function() {
 snake.init();
 discount.classList.remove("hidden");
 
-var discountScore = snake.final;
-    while(snake.final>= 100){
-      discount.innerHTML = "Congrats! You have earned a total of " + snake.final + " points. Here's your free 10% off discount code!"
-    
+  let finalDiscount = snake.final;
+
+    if(finalDiscount >= 10){
+    discount.innerHTML = "Woo! " + finalDiscount + " points! Good job, here's a discount code!";
     }
+  
 
 modul.classList.remove("hidden");
 }
