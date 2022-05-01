@@ -42,6 +42,8 @@ h1{
         color:seashell;
         font-size:300%;
         text-shadow: 1px 1px #a5c0d4;
+        text-align:right;
+        
     }
     
     #snakeBody {
