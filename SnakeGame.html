@@ -34,6 +34,10 @@
     <span>Play Snake</span>
     </div>
 
+    <div class="refresh" id="modul2">
+      <span>Refresh</span>
+      </div>
+
     <div id="discountCodes">
 
     </div>
@@ -46,8 +50,12 @@
   var snakeTable = document.querySelector(".snakeTable");
 var boxes = document.getElementsByClassName("box");
 var modul = document.querySelector("#modul");
+var modul2 = document.querySelector("#modul2");
 var start = document.querySelector(".start");
+var refresh = document.querySelector(".refresh");
 var discount = document.getElementById("discountCodes");
+
+modul2.classList.add("hidden");
 
 var table = {
 rowsCols: 21,
@@ -80,6 +88,7 @@ init: function() {
 snake.init();
 
 start.addEventListener("click", startGame);
+refresh.addEventListener("click", refreshGame);
 
 function startGame() {
 modul.classList.add("hidden");
@@ -99,25 +108,25 @@ setInt = setInterval(function() {
 function stopGame() {
 clearInterval(setInt);
 snake.final = snake.score;
-start.querySelector("span").innerHTML = snake.score + " Points !";
+refresh.querySelector("span").innerHTML = snake.score + " Points !";
 setTimeout(function() {
-  start.querySelector("span").innerHTML = "Play Snake";
+  refresh.querySelector("span").innerHTML = "Refresh";
 }, 1500);
 snake.init();
 discount.classList.remove("hidden");
 
-  let finalDiscount = snake.score;
+  let finalDiscount = snake.final;
 
     if(finalDiscount >= 10){
       discount.innerHTML = "Woo! " + finalDiscount + " points! Good job, here's a discount code!";
-
-
-setTimeout(function() {
-  location.reload();
-}, 5000);
+        }
   
 
-modul.classList.remove("hidden");
+modul2.classList.remove("hidden");
+}
+
+function refreshGame(){
+  location.reload();
 }
 
 
