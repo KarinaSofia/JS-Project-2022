@@ -52,14 +52,13 @@
 
 <script>
 
-let array=document.getElementsByTagName("li");
-let count=1;
 
 let functionEnter=document.getElementById("enter");
 functionEnter.addEventListener("click",function(){
   Print();
 },false);
 
+  let count=1;
   
 //Output
 function Print(){
@@ -73,15 +72,8 @@ let name=document.createTextNode(name1);
 
 let li=document.createElement('li');
 
-//done
  let commentBox=document.getElementById("comment-box" + count).value;
 let text=document.createTextNode(commentBox);
-
-//added
- document.getElementById(li+ count).innerHTML = commentBox;
- //added
- document.getElementById("nameInput " + "comments").value ="";
- count++;
 
 document.getElementById("unordered").appendChild(li);
 
@@ -93,14 +85,13 @@ li.appendChild(name);
 li.appendChild(e);
 li.appendChild(text);
 
+//Clear function
+if(count==li){
 document.getElementById("unordered").appendChild(li);
-
-//here
-if(count == document.getElementById("click")){
-  removeEventListener(text,name1)
 
 }
  
+
 }
 
 </script>
