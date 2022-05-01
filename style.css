@@ -8,7 +8,7 @@ h1{
     
     body{
         background-color: #3e4056;
-        font-family: century gothic, sans-serif;  
+        font-family: trajan, sans-serif;  
     }
 
     main{
@@ -51,6 +51,7 @@ h1{
     z-index: 402;
     right: 0;
     padding: 0;
+<<<<<<< HEAD
         text-align:right;
         position:relative;
         width: 940px;
@@ -61,6 +62,8 @@ h1{
         padding: 0;
         margin: top 100px;
 
+=======
+>>>>>>> 289ef277b859c6cf92d360f38553febd234dd90d
     }
     
     #snakeBody {
