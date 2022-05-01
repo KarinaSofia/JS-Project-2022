@@ -16,15 +16,6 @@ h1{
         padding-right: 5%; 
     }
 
-    img {
-      border: 5px solid rgb(59, 77, 102);
-    }
-
-    .img{  
-      border: none;  
-      }  
-      
-
     center {
         text-align:center;
        }
