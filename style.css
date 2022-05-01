@@ -1,15 +1,14 @@
 h1{
-    background-color:rgb(0, 0, 0);
     color:seashell;
     font-size:300%;
-    text-shadow: 1px 1px #605f79;
+    text-shadow: 1px 1px #a5c0d4;
     text-align:center;
-    background-image: url("navy-blue-water-art.jpg");
+  
     }
     
     body{
-       background:linear-gradient(#0e1023,#0e0f38);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;  
+        background-color: #3e4056;
+        font-family: trajan, sans-serif;  
     }
 
     main{
@@ -33,20 +32,38 @@ h1{
       }
 
     .bag{
-        background-color:rgb(0, 80, 155);
         color:seashell;
         font-size:210%;
-        text-shadow: 1px 1px #605f79;
+        text-shadow: 1px 1px #a5c0d4;
         text-align:center;
     }
 
     .navSnake{
-        background-color: rgb(9, 50, 139);
         overflow:hidden;
         color:seashell;
         font-size:300%;
-        text-shadow: 1px 1px #605f79;
-        text-align:center;
+        text-shadow: 1px 1px #a5c0d4;
+        text-align:center;  
+        position:relative;
+        width: 940px;
+    height: 104px;
+    margin: 0px auto;
+    z-index: 402;
+    right: 0;
+    padding: 0;
+<<<<<<< HEAD
+        text-align:right;
+        position:relative;
+        width: 940px;
+        height: 104px;
+        margin: 0px auto;
+        z-index: 402;
+        right: 0;
+        padding: 0;
+        margin: top 100px;
+
+=======
+>>>>>>> 289ef277b859c6cf92d360f38553febd234dd90d
     }
     
     #snakeBody {
@@ -202,7 +219,7 @@ h1{
         padding-top:14px 16px;
         font-size:20px;
         text-decoration:none;
-        min-width:500px;
+        min-width:50px;
         color:aliceblue
     }
     
