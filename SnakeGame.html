@@ -6,15 +6,15 @@
    <title>Snake Game</title>
    <link rel="stylesheet" href="style.css" />
 
-   <style>
+<style>
 
-      * {
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
-   </style>
+</style>
 </head>
   
 <body id="snakeBody">
@@ -27,13 +27,17 @@
     
     </div>
 
-  <header id="snakeTitle">SNAKE</header>
+  <header id="snakeTitle">SNAKE GAME</header>
 
-  <h2 class="modul">
-    <div class="start">
+
+    <div class="start" id="modul">
     <span>Play Snake</span>
     </div>
-  </h2>
+
+    <div id="discountCodes">
+
+    </div>
+  
 
   
   <section class="snakeTable"></section>
@@ -41,8 +45,9 @@
 <script>
   var snakeTable = document.querySelector(".snakeTable");
 var boxes = document.getElementsByClassName("box");
-var modul = document.querySelector(".modul");
+var modul = document.querySelector("#modul");
 var start = document.querySelector(".start");
+var discount = document.getElementById("discountCodes");
 
 var table = {
 rowsCols: 21,
@@ -78,6 +83,8 @@ start.addEventListener("click", startGame);
 
 function startGame() {
 modul.classList.add("hidden");
+discount.classList.add("hidden");
+
 
 snake.time = 1;
 renderSnake();
@@ -97,6 +104,14 @@ setTimeout(function() {
   start.querySelector("span").innerHTML = "Play Snake";
 }, 1500);
 snake.init();
+discount.classList.remove("hidden");
+
+var discountScore = snake.final;
+    while(snake.final>= 100){
+      discount.innerHTML = "Congrats! You have earned a total of " + snake.final + " points. Here's your free 10% off discount code!"
+    
+    }
+
 modul.classList.remove("hidden");
 }
 
@@ -249,120 +264,6 @@ if (snakeTable.innerHTML === "") {
   statusElt.appendChild(scoreElt);
 }
 }
-
-$("document").ready(function() {
-$("body")
-  .swipeDetector()
-  .on("swipeLeft.sd swipeRight.sd swipeUp.sd swipeDown.sd", function(event) {
-    if (event.type === "swipeLeft") {
-      if (snake.direction === "right") return;
-      snake.direction = "left";
-    } else if (event.type === "swipeRight") {
-      if (snake.direction === "left") return;
-      snake.direction = "right";
-    } else if (event.type === "swipeUp") {
-      if (snake.direction === "down") return;
-      snake.direction = "up";
-    } else if (event.type === "swipeDown") {
-      if (snake.direction === "up") return;
-      snake.direction = "down";
-    }
-    snake.canTurn = 0;
-  });
-});
-
-
-(function($) {
-$.fn.swipeDetector = function(options) {
-  
-  var swipeState = 0;
-  
-  var startX = 0;
-  var startY = 0;
-  
-  var pixelOffsetX = 0;
-  var pixelOffsetY = 0;
-
-  var swipeTarget = this;
-  var defaultSettings = {
-  
-    swipeThreshold: 30,
-   
-    useOnlyTouch: true
-  };
-
-  function swipeStart(event) {
-    if (options.useOnlyTouch && !event.originalEvent.touches) return;
-
-    if (event.originalEvent.touches) event = event.originalEvent.touches[0];
-
-    if (swipeState === 0) {
-      swipeState = 1;
-      startX = event.clientX;
-      startY = event.clientY;
-    }
-  }
-
-  function swipeEnd(event) {
-    if (swipeState === 2) {
-      swipeState = 0;
-
-      if (
-        Math.abs(pixelOffsetX) > Math.abs(pixelOffsetY) &&
-        Math.abs(pixelOffsetX) > options.swipeThreshold
-      ) {
-  
-        if (pixelOffsetX < 0) {
-          swipeTarget.trigger($.Event("swipeLeft.sd"));
-        } else {
-          swipeTarget.trigger($.Event("swipeRight.sd"));
-        }
-      } else if (Math.abs(pixelOffsetY) > options.swipeThreshold) {
-
-        if (pixelOffsetY < 0) {
-          swipeTarget.trigger($.Event("swipeUp.sd"));
-        } else {
-          swipeTarget.trigger($.Event("swipeDown.sd"));
-        }
-      }
-    }
-  }
-
-  function swiping(event) {
-
-    if (swipeState !== 1) return;
-
-    if (event.originalEvent.touches) {
-      event = event.originalEvent.touches[0];
-    }
-
-    var swipeOffsetX = event.clientX - startX;
-    var swipeOffsetY = event.clientY - startY;
-
-    if (
-      Math.abs(swipeOffsetX) > options.swipeThreshold ||
-      Math.abs(swipeOffsetY) > options.swipeThreshold
-    ) {
-      swipeState = 2;
-      pixelOffsetX = swipeOffsetX;
-      pixelOffsetY = swipeOffsetY;
-    }
-  }
-
-  return swipeTarget; 
-};
-})(jQuery);
-
-
-function preventDefault(e){e.preventDefault();}
-function disableScroll(){
-  document.body.addEventListener('touchmove', preventDefault, { passive: false });
-}
-function enableScroll(){
-  document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-}
-disableScroll();
-
   
 </script>
 </body>

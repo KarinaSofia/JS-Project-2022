@@ -48,42 +48,53 @@ With your support we can save the remaining sea life!
 </div>
 
 <br>
-<center>
-<h2 class="sub-title"> Aqua Game Shop </h2>
-</center>
 
-<div class="row" >
-    <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" 
-    width="275" height="350" src="Subnautica.png"  alt="subnautica">
-    <div id="imagedes1" class="collapsed text" style="font-size:90%;">
+<h2 class="sub-title"> Aqua Game Shop </h2>
+
+<div class="container">
+<div class="row">
+
+    <div class="column">
+        <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" 
+        width="275" height="350" src="Subnautica.png"  alt="subnautica">
+        <div id="imagedes1" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item1" value="1099" />
         <label for="sub1">Buy Subnautica</label>
+        </div>
     </div>
 
-    <img id="image2" class="img-fluid d-none d-md-block" style="margin:2%;" 
-    width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
-    <div id="imagedes2" class="collapsed text" style="font-size:90%;">
+    <div class="column">
+        <img id="image2" class="img-fluid d-none d-md-block" style="margin:2%;" 
+        width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
+        <div id="imagedes2" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item2" value="1099" />
         <label for="sub2">Buy Subnautica Below Zero</label>
+        </div>
     </div>
 
-    <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" 
-    width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
-    <div id="imagedes3" class="collapsed text" style="font-size:90%;">
+    <div class="column">
+        <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" 
+        width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
+        <div id="imagedes3" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item3" value="1599" />
         <label for="sub1">Buy Sea Of Theives</label>
+        </div>
     </div>
 
-    <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" 
-    width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
-    <div id="imagedes4" class="collapsed text" style="font-size:90%;">
-        <input type="checkbox" id="item[4" value="1599" />
+    <div class="column">
+        <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" 
+        width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
+        <div id="imagedes4" class="collapsed text" style="font-size:90%;">
+        <input type="checkbox" id="item[4" value="1599"/>
         <label for="sub1">Buy Song Of The Deep</label>
-    </div>
+        </div>  
+    </div>    
 
 </div>
 
+<br>
 
+<<<<<<< HEAD
 <input type="button" value="Calculate" id="sButton" onclick="calculate()">
 
 <table class="bag">
@@ -115,6 +126,44 @@ With your support we can save the remaining sea life!
          <i>&copy; Steam</i>
     </p>
     <br>
+=======
+<div class="row">
+    <div class="column">
+        <center>
+    <input type="button" value="    Calculate your total!   " id="sButton" onclick="calculate()">
+        </center>
+    <table class="bag">
+        <colgroup>
+        <col class="label" />
+        <col class="amount" />
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>Bag Total</td>
+            <td>0.00</td>
+        </tr>
+        <tr>
+            <td>Our Donation</td>
+            <td>0.00</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="column" style="width:75%;">
+    <a id="shop" class="text">
+        <b>Why shop with us?</b>
+    </a> 
+    <div id="divTwo" class="collapsed text" style="font-size:90%;">
+        <p>Aqua Gaming knows how much you like our oceans and gaming! 
+            By buying your favorite games through us, a percentage of your purchase
+            will be donated to organisations that help protect and restore our oceans. 
+            To learn more about the organisations we support head
+            to the About us! section. 
+        </p>
+        <br>
+    </div>
+</div>
+>>>>>>> 57416985c9d1cbb226465a17d43d195fda87a947
 </div>
 <div id="subnauticaDiv" class="collapsed text" style="font-size:90%"> 
 <p>Descend into the depths of an alien underwater world filled with wonder and peril. 
@@ -127,6 +176,8 @@ With your support we can save the remaining sea life!
 
 
 </main>
+
+<br>
 
 <footer>
     <b><i><h6>
@@ -193,7 +244,7 @@ function hide(id){
 function calculate(){
       let items = document.getElementsByTagName("input");
       let cells = document.getElementsByTagName("td");
-      const donations = 0.1;
+      const donations = 0.4;
       let total = 0;
 	  let totalDonations = 0;
 		
