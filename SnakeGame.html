@@ -99,18 +99,22 @@ setInt = setInterval(function() {
 function stopGame() {
 clearInterval(setInt);
 snake.final = snake.score;
-start.querySelector("span").innerHTML = snake.final + " Points !";
+start.querySelector("span").innerHTML = snake.score + " Points !";
 setTimeout(function() {
   start.querySelector("span").innerHTML = "Play Snake";
 }, 1500);
 snake.init();
 discount.classList.remove("hidden");
 
-  let finalDiscount = snake.final;
+  let finalDiscount = snake.score;
 
     if(finalDiscount >= 10){
-    discount.innerHTML = "Woo! " + finalDiscount + " points! Good job, here's a discount code!";
-    }
+      discount.innerHTML = "Woo! " + finalDiscount + " points! Good job, here's a discount code!";
+
+
+setTimeout(function() {
+  location.reload();
+}, 5000);
   
 
 modul.classList.remove("hidden");
