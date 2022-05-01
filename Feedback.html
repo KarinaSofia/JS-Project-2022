@@ -125,7 +125,12 @@
         <input type="radio" name="question5" value="c" onclick="record(15, 'c')"/>80 to 100 gallons<!--correct answer-->
     </p>
     <br>
-    <input type="button" value="Score the quiz"  onclick ="score()"/>
+    <table>
+        <tr>
+          <td><input type="button" value="Score the quiz"  onclick ="score()"/></td>
+          <td><input type="button" value="Try Again"  onclick ="refresh()"/></td>
+        </tr>
+    </table>
     </form>
     
 </main>
@@ -150,6 +155,10 @@ let userAnswer = new Array(15);
 		window.alert("You got " + count + " questions out of 15 correct.");
 		
 	}
+
+  function refresh(){
+    location.reload();
+  }
   
 </script>
 
