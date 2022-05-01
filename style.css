@@ -8,7 +8,7 @@ h1{
     
     body{
         background-color: #3e4056;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;  
+        font-family: century gothic, sans-serif;  
     }
 
     main{
@@ -43,6 +43,7 @@ h1{
         color:seashell;
         font-size:300%;
         text-shadow: 1px 1px #a5c0d4;
+<<<<<<< HEAD
         text-align:center;  
         position:relative;
         width: 940px;
@@ -51,6 +52,18 @@ h1{
     z-index: 402;
     right: 0;
     padding: 0;
+=======
+        text-align:right;
+        position:relative;
+        width: 940px;
+        height: 104px;
+        margin: 0px auto;
+        z-index: 402;
+        right: 0;
+        padding: 0;
+        margin: top 100px;
+
+>>>>>>> c7cae830c9114d3f677a370e046baba6cade2733
     }
     
     #snakeBody {
