@@ -1,8 +1,7 @@
 h1{
-    background-color:rgb(0, 80, 155);
     color:seashell;
     font-size:300%;
-    text-shadow: 1px 1px #605f79;
+    text-shadow: 1px 1px #a5c0d4;
     text-align:center;
     }
     
@@ -32,10 +31,9 @@ h1{
       }
 
     .bag{
-        background-color:rgb(0, 80, 155);
         color:seashell;
         font-size:210%;
-        text-shadow: 1px 1px #605f79;
+        text-shadow: 1px 1px #a5c0d4;
         text-align:center;
     }
 
@@ -44,7 +42,7 @@ h1{
         overflow:hidden;
         color:seashell;
         font-size:300%;
-        text-shadow: 1px 1px #605f79;
+        text-shadow: 1px 1px #a5c0d4;
         text-align:center;
     }
     
