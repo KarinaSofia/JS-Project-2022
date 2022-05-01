@@ -37,7 +37,7 @@
     <div class="refresh" id="modul2">
       <span>Refresh</span>
       </div>
-
+    <br>
     <div id="discountCodes">
 
     </div>
@@ -117,8 +117,12 @@ discount.classList.remove("hidden");
 
   let finalDiscount = snake.final;
 
-    if(finalDiscount >= 10){
-      discount.innerHTML = "Woo! " + finalDiscount + " points! Good job, here's a discount code!";
+  let code = "HUNGRYSHARKS";
+  let discountCode = code.bold();
+
+
+    if(finalDiscount >= 200){
+      discount.innerHTML = "Way to go, scuba diver! You've eaten a total of " + finalDiscount + " fish. What a hungry shark you are. Here's a 10% discount. The money discounted will be used to keep hungry sharks like you, from eating plastic and other toxic substances. Please copy paste this code: " + discountCode;
         }
   
 

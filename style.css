@@ -6,13 +6,16 @@ h1{
     }
     
     body{
-       background:linear-gradient(#5582b0,#182e45);
         font-family: Verdana, Geneva, Tahoma, sans-serif;  
     }
 
     main{
         padding-left: 5%;
         padding-right: 5%; 
+    }
+
+    img {
+      border: 5px solid rgb(59, 77, 102);
     }
 
     center {
