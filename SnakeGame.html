@@ -33,6 +33,10 @@
     <div class="start" id="modul">
     <span>Play Snake</span>
     </div>
+
+    <div id="discountCodes">
+
+    </div>
   
 
   
@@ -43,6 +47,7 @@
 var boxes = document.getElementsByClassName("box");
 var modul = document.querySelector("#modul");
 var start = document.querySelector(".start");
+var discount = document.getElementById("discountCodes");
 
 var table = {
 rowsCols: 21,
@@ -78,6 +83,8 @@ start.addEventListener("click", startGame);
 
 function startGame() {
 modul.classList.add("hidden");
+discount.classList.add("hidden");
+
 
 snake.time = 1;
 renderSnake();
@@ -97,6 +104,14 @@ setTimeout(function() {
   start.querySelector("span").innerHTML = "Play Snake";
 }, 1500);
 snake.init();
+discount.classList.remove("hidden");
+
+var discountScore = snake.final;
+    while(snake.final>= 100){
+      discount.innerHTML = "Congrats! You have earned a total of " + snake.final + " points. Here's your free 10% off discount code!"
+    
+    }
+
 modul.classList.remove("hidden");
 }
 
