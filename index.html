@@ -173,38 +173,28 @@ With your support we can save the remaining sea life!
 </main>
 
 <article>
-    <body> 
-        <h1>Feedback</h1>
     
-      <article>
-      <h2>Comment</h2>
-      <form>
-    <fieldset id="info">
-      <label for="nameInput">
-        <label for="inputForm">
-         Name
-        <input type="text" id="nameInput" placeholder="comment here" />
-      
-    <label for="comments">
-      <label for="inputForm">
-        Comment
-      <input type="text" id="comment-box" placeholder="comment here" />
-    </label>
-    
-      <input type="button" value="comment" id="enter"/>
-    </label>
-    
-    
-    </fieldset>
-    </label>
-      </form>
-      <ul id="unordered">
-      </ul>
-    
-      </article>
-    <div id="o1">
-    </div>
-
+        <h2>Feedback</h2>
+        <form>
+          <fieldset id="contactinfo">
+            <label for="nameinput">
+              Name
+              <input type="text" id="nameinput" name="name" placeholder="first and last name" />
+            </label>
+            <label for="emailinput">
+              Email
+              <input type="text" id="emailinput" name="email" placeholder="address@example.com" />
+            </label>
+            <label for="phoneinput">
+              Feedback
+              <input type="text" id="feedbackinput" name="feedback" placeholder="enter your feedback" />
+            </label>
+          </fieldset>
+          <fieldset id="submitbutton">
+            <input type="button" value="Submit" id="submit"/>
+          </fieldset>
+       </form>
+     
 </article>
 
 
@@ -303,62 +293,36 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
-let array=document.getElementsByTagName("li");
-let count=1;
 
-let functionEnter=document.getElementById("enter");
-functionEnter.addEventListener("click",function(){
-  Print();
-},false);
-
-  
-//Output
-function Print(){
-//console.log(1);
-let insert =document.getElementById("body");
-
-let name1=document.getElementById("nameInput").value;
-let name=document.createTextNode(name1);
-
-
-
-let li=document.createElement('li');
-
-//done
- let commentBox=document.getElementById("comment-box" + count).value;
-let text=document.createTextNode(commentBox);
-
-//added
- document.getElementById(li+ count).innerHTML = commentBox;
- //added
- document.getElementById("nameInput " + "comments").value ="";
- count++;
-
-document.getElementById("unordered").appendChild(li);
-
-
-let e=document.createElement("br");
-
-
-li.appendChild(name);
-li.appendChild(e);
-li.appendChild(text);
-
-document.getElementById("unordered").appendChild(li);
-
-//here
-if(count == document.getElementById("click")){
-  removeEventListener(text,name1)
-
-}
-
-}
+//feedback  
+document.getElementById("submit").addEventListener("click", submit, false);
+	 
+	 
+	 let nameInput = document.getElementById("nameinput");
+	 let emailInput = document.getElementById("emailinput");
+	 let feedback = document.getElementById("feedbackinput");
+	 
+	 
+	 function submit(){
+	 
+	 let name = document.createTextNode(nameInput.value);
+	 let email = document.createTextNode(emailInput.value);
+	 let feedback = document.createTextNode(feedbackInput.value);
+	 
+	 
+	 let paragraph = document.createElement("p");
+	 
+	 
+	 paragraph.appendChild(name);
+	 paragraph.appendChild(document.createElement("br"));
+	 paragraph.appendChild(email);
+	 paragraph.appendChild(document.createElement("br"));
+	 paragraph.appendChild(feedback);
+	 
+	 document.getElementById("body").appendChild(paragraph); 
+	 }
 
 </script>
 	 
 </body>
 </html>
-
-
-
-
