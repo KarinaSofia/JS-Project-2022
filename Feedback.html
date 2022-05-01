@@ -21,20 +21,14 @@
   </div>
 
   <article>
-<<<<<<< HEAD
-  <h2>Comments</h2>
-  <form>
-<fieldset id="info">
-=======
   <h2>Comment</h2>
   <form>
 <fieldset id="info">
-  <label for="inputForm">
+  <label for="nameInput">
     <label for="inputForm">
-     Nice
-    <input type="text" id="name" placeholder="comment here" />
+     Name
+    <input type="text" id="nameInput" placeholder="comment here" />
   
->>>>>>> 53755050417c6705dba331804c8c3f272bcd3ce2
 <label for="comments">
   <label for="inputForm">
     Comment
@@ -57,7 +51,6 @@
 
 
 <script>
-<<<<<<< HEAD
 
 
 let functionEnter=document.getElementById("enter");
@@ -65,74 +58,41 @@ functionEnter.addEventListener("click",function(){
   Print();
 },false);
 
-
+  let count=1;
+  
 //Output
 function Print(){
 //console.log(1);
-let insert =document.getElementById("o1");
+let insert =document.getElementById("body");
+
+let name1=document.getElementById("nameInput").value;
+let name=document.createTextNode(name1);
+
 
 
 let li=document.createElement('li');
 
- let commentBox=document.getElementById("comment-box").value;
+ let commentBox=document.getElementById("comment-box" + count).value;
 let text=document.createTextNode(commentBox);
 
 document.getElementById("unordered").appendChild(li);
+
+
+let e=document.createElement("br");
+
+
+li.appendChild(name);
+li.appendChild(e);
 li.appendChild(text);
 
-
+//Clear function
+if(count==li){
+document.getElementById("unordered").appendChild(li);
 
 }
+ 
 
-/*
-=======
->>>>>>> 53755050417c6705dba331804c8c3f272bcd3ce2
-let functionEnter=document.getElementById("enter");
-functionEnter.addEventListener("click",function(){
-  Print();
-},false);
-
-
-//Output
-function Print(){
-//console.log(1);
-let insert =document.getElementById("o1");
-
-//Name
-let inputForm=document.getElementById("").value;
-let name=document.createTextNode(inputForm);
-
- //CommentBox
- let li=document.createElement('li');
-
- let commentBox=document.getElementById("comment-box").value;
-let text=document.createTextNode(commentBox);
-
-
-//Br
-let e1=document.createElement("br");
-let e2=document.createElement("br");
-
-<<<<<<< HEAD
-
-insert.appendChild(text);
-
-
-document.getElementById("unordered").appendChild(li);
 }
-function Clear(){
-*/
-
-
-=======
-li.appendChild(name);
-insert.appendChild(e1);
-li.appendChild(email);
-insert.appendChild(e2);
-
-
-document.getElementById("unordered").appendChild(li);
->>>>>>> 53755050417c6705dba331804c8c3f272bcd3ce2
 
 </script>
 </body> 
