@@ -7,7 +7,7 @@ h1{
     
     body{
         background-color: #3e4056;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;  
+        font-family: century gothic, sans-serif;  
     }
 
     main{
@@ -43,7 +43,7 @@ h1{
         font-size:300%;
         text-shadow: 1px 1px #a5c0d4;
         text-align:right;
-        
+
     }
     
     #snakeBody {
