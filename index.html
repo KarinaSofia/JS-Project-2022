@@ -172,6 +172,42 @@ With your support we can save the remaining sea life!
 
 </main>
 
+<article>
+    <body> 
+        <h1>Feedback</h1>
+    
+      <article>
+      <h2>Comment</h2>
+      <form>
+    <fieldset id="info">
+      <label for="nameInput">
+        <label for="inputForm">
+         Name
+        <input type="text" id="nameInput" placeholder="comment here" />
+      
+    <label for="comments">
+      <label for="inputForm">
+        Comment
+      <input type="text" id="comment-box" placeholder="comment here" />
+    </label>
+    
+      <input type="button" value="comment" id="enter"/>
+    </label>
+    
+    
+    </fieldset>
+    </label>
+      </form>
+      <ul id="unordered">
+      </ul>
+    
+      </article>
+    <div id="o1">
+    </div>
+
+</article>
+
+
 <br>
 
 <footer>
@@ -265,6 +301,57 @@ function carousel() {
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
   setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+let array=document.getElementsByTagName("li");
+let count=1;
+
+let functionEnter=document.getElementById("enter");
+functionEnter.addEventListener("click",function(){
+  Print();
+},false);
+
+  
+//Output
+function Print(){
+//console.log(1);
+let insert =document.getElementById("body");
+
+let name1=document.getElementById("nameInput").value;
+let name=document.createTextNode(name1);
+
+
+
+let li=document.createElement('li');
+
+//done
+ let commentBox=document.getElementById("comment-box" + count).value;
+let text=document.createTextNode(commentBox);
+
+//added
+ document.getElementById(li+ count).innerHTML = commentBox;
+ //added
+ document.getElementById("nameInput " + "comments").value ="";
+ count++;
+
+document.getElementById("unordered").appendChild(li);
+
+
+let e=document.createElement("br");
+
+
+li.appendChild(name);
+li.appendChild(e);
+li.appendChild(text);
+
+document.getElementById("unordered").appendChild(li);
+
+//here
+if(count == document.getElementById("click")){
+  removeEventListener(text,name1)
+
+}
+
 }
 
 </script>
