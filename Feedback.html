@@ -21,19 +21,9 @@
   </div>
 
   <article>
-  <h2>Information(Optional)</h2>
+  <h2>Comments</h2>
   <form>
 <fieldset id="info">
-  <label for="inputForm">
-    Name
-  <input type="text" id="inputForm" name="name" placeholder="name" />
- </label>
- 
- <label for="emailForm">
-   Email
- <input type="text" id="emailForm" name="email" placeholder="address@example.com" />
-</label>
-
 <label for="comments">
   <label for="inputForm">
     Comment
@@ -59,17 +49,33 @@
 
 
 <script>
-  //Color
-  //When entering something
-let blue=document.getElementById("inputForm");
- blue.addEventListener('blur',Blue(),false);
-function Blue(){
-blue.style.backgroundColor='blue';
+
+
+let functionEnter=document.getElementById("enter");
+functionEnter.addEventListener("click",function(){
+  Print();
+},false);
+
+
+//Output
+function Print(){
+//console.log(1);
+let insert =document.getElementById("o1");
+
+
+let li=document.createElement('li');
+
+ let commentBox=document.getElementById("comment-box").value;
+let text=document.createTextNode(commentBox);
+
+document.getElementById("unordered").appendChild(li);
+li.appendChild(text);
+
 
 
 }
 
-
+/*
 let functionEnter=document.getElementById("enter");
 functionEnter.addEventListener("click",function(){
   Print();
@@ -103,22 +109,18 @@ let text=document.createTextNode(commentBox);
 let e1=document.createElement("br");
 let e2=document.createElement("br");
 
-insert.appendChild(name);
-insert.appendChild(e1);
-insert.appendChild(email);
-insert.appendChild(e2);
+
 insert.appendChild(text);
 
 
 document.getElementById("unordered").appendChild(li);
 }
 function Clear(){
+*/
 
 
-
-
-}
 
 </script>
 </body> 
 </html>
+
