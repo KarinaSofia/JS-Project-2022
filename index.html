@@ -13,26 +13,11 @@
 </head>
 <body>
 
-<div class="row grid">
-
-    <div class="col-4">    
-
 <header>
    <h1> Aqua Gaming</h1>
 </header>
 
-    <div class="col-8">  
-
-<div class="navSnake">
-
-<a class="active" href="Index.html"><b>Home</b></a>    
-<a class="active" href="SnakeGame.html"><b>Snake Game</b></a>
-<a class="active" href="Feedback.html"><b>Feedback</b></a>
-
-</div>
-
 <div class="column" style="width:75%;">  
-
     <div class="navSnake">
         <a class="active" href="Index.html"><b>&nbsp;&nbsp;Home&nbsp;&nbsp;</b></a>    
         <a class="active" href="SnakeGame.html"><b>&nbsp;&nbsp;Snake Game&nbsp;&nbsp;</b></a>
@@ -49,7 +34,6 @@
     <img class="mySlides" src="sub_01.jpg.jpg"width="100%" height="600" src="Subnauticabz.jpg"  alt="subnautica">
 
 </article>
-
 
 <main>
 <br>
@@ -311,6 +295,21 @@ function calculate(){
 		cells[1].textContent = total.toFixed(2);
 		cells[3].textContent = totalDonations.toFixed(2);
    }
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 
 </script>
 	 
