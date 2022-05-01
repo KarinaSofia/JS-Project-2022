@@ -51,19 +51,6 @@ h1{
     z-index: 402;
     right: 0;
     padding: 0;
-<<<<<<< HEAD
-        text-align:right;
-        position:relative;
-        width: 940px;
-        height: 104px;
-        margin: 0px auto;
-        z-index: 402;
-        right: 0;
-        padding: 0;
-        margin: top 100px;
-
-=======
->>>>>>> 289ef277b859c6cf92d360f38553febd234dd90d
     }
     
     #snakeBody {
