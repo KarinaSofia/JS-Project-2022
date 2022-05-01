@@ -21,24 +21,18 @@
   </div>
 
   <article>
-  <h2>Information(Optional)</h2>
+  <h2>Comment</h2>
   <form>
 <fieldset id="info">
   <label for="inputForm">
-    Name
-  <input type="text" id="inputForm" name="name" placeholder="name" />
- </label>
- 
- <label for="emailForm">
-   Email
- <input type="text" id="emailForm" name="email" placeholder="address@example.com" />
-</label>
-
+    <label for="inputForm">
+     Nice
+    <input type="text" id="name" placeholder="comment here" />
+  
 <label for="comments">
   <label for="inputForm">
     Comment
   <input type="text" id="comment-box" placeholder="comment here" />
-
 </label>
 
   <input type="button" value="comment" id="enter"/>
@@ -56,20 +50,7 @@
 </div>
 
 
-
-
 <script>
-  //Color
-  //When entering something
-let blue=document.getElementById("inputForm");
- blue.addEventListener('blur',Blue(),false);
-function Blue(){
-blue.style.backgroundColor='blue';
-
-
-}
-
-
 let functionEnter=document.getElementById("enter");
 functionEnter.addEventListener("click",function(){
   Print();
@@ -80,13 +61,10 @@ functionEnter.addEventListener("click",function(){
 function Print(){
 //console.log(1);
 let insert =document.getElementById("o1");
-//Name
-let inputForm=document.getElementById("inputForm").value;
-let name=document.createTextNode(inputForm);
 
-//Email
-let emailForm=document.getElementById("emailForm").value;
-let email=document.createTextNode(emailForm);
+//Name
+let inputForm=document.getElementById("").value;
+let name=document.createTextNode(inputForm);
 
  //CommentBox
  let li=document.createElement('li');
@@ -95,26 +73,17 @@ let email=document.createTextNode(emailForm);
 let text=document.createTextNode(commentBox);
 
 
-
-
-
-
 //Br
 let e1=document.createElement("br");
 let e2=document.createElement("br");
 
-insert.appendChild(name);
+li.appendChild(name);
 insert.appendChild(e1);
-insert.appendChild(email);
+li.appendChild(email);
 insert.appendChild(e2);
-insert.appendChild(text);
 
 
 document.getElementById("unordered").appendChild(li);
-}
-function Clear(){
-
-
 
 
 }
