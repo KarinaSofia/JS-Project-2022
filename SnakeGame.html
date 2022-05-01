@@ -9,19 +9,24 @@
 <style>
 
   * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  }
+
+  table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 </style>
 </head>
   
-<body id="snakeBody">
+<body >
   <header>
     <h1>Snake Game</h1>
  </header>
  
+ <div id="snakeBody">
  <div class="column" style="width:75%;">  
      <div class="navSnake">
          <a class="active" href="Index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>    
@@ -29,9 +34,17 @@
          <a class="active" href="Feedback.html">&nbsp;&nbsp;Quiz&nbsp;&nbsp;</a>
      </div>
  </div>
- </div>
 
 
+ <table>
+
+  <tr>
+
+    <td>
+ <section class="snakeTable"></section>
+    </td>
+
+    <td>
     <div class="start" id="modul">
     <span>Play Snake</span>
     </div>
@@ -43,8 +56,10 @@
     <div id="discountCodes">
 
     </div>
+    </td>
+  </tr>
   
-  <section class="snakeTable"></section>
+</table>
   
 <script>
   var snakeTable = document.querySelector(".snakeTable");
@@ -284,5 +299,6 @@ if (snakeTable.innerHTML === "") {
 }
 
 </script>
+ </div>
 </body>
 </html>  
