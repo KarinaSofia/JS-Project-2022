@@ -50,40 +50,54 @@ With your support we can save the remaining sea life!
 
 <h2 class="sub-title"> Aqua Game Shop </h2>
 
+<div class="container">
 <div class="row">
+
+    <div class="column">
         <img id="image1" class="img-fluid d-none d-md-block" style="margin:2%;" 
         width="275" height="350" src="Subnautica.png"  alt="subnautica">
         <div id="imagedes1" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item1" value="1099" />
         <label for="sub1">Buy Subnautica</label>
         </div>
+    </div>
 
-
+    <div class="column">
         <img id="image2" class="img-fluid d-none d-md-block" style="margin:2%;" 
         width="275" height="350" src="Subnauticabz.jpg"  alt="subnautica">
         <div id="imagedes2" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item2" value="1099" />
         <label for="sub2">Buy Subnautica Below Zero</label>
         </div>
+    </div>
 
-
+    <div class="column">
         <img id="image3" class="img-fluid d-none d-md-block" style="margin:2%;" 
         width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
         <div id="imagedes3" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item3" value="1599" />
         <label for="sub1">Buy Sea Of Theives</label>
         </div>
+    </div>
 
+    <div class="column">
         <img id="image4" class="img-fluid d-none d-md-block" style="margin:2%;" 
         width="275" height="350" src="song-of-the-deep.jpg"  alt="Song of the deep">
         <div id="imagedes4" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item[4" value="1599"/>
         <label for="sub1">Buy Song Of The Deep</label>
         </div>  
+    </div>    
+
 </div>
 
-    <input type="button" value="Calculate" id="sButton" onclick="calculate()">
+<br>
 
+<div class="row">
+    <div class="column">
+        <center>
+    <input type="button" value="    Calculate your total!   " id="sButton" onclick="calculate()">
+        </center>
     <table class="bag">
         <colgroup>
         <col class="label" />
@@ -91,16 +105,17 @@ With your support we can save the remaining sea life!
         </colgroup>
         <tbody>
         <tr>
-            <td id="tdId">Bag Total</td>
-            <td id="tdId">0.00</td>
+            <td>Bag Total</td>
+            <td>0.00</td>
         </tr>
         <tr>
-            <td id="tdId">Donation</td>
-            <td id="tdId">0.00</td>
+            <td>Our Donation</td>
+            <td>0.00</td>
         </tr>
         </tbody>
     </table>
-
+</div>
+<div class="column" style="width:75%;">
     <a id="shop" class="text">
         <b>Why shop with us?</b>
     </a> 
@@ -113,9 +128,12 @@ With your support we can save the remaining sea life!
         </p>
         <br>
     </div>
-
+</div>
+</div>
 
 </main>
+
+<br>
 
 <footer>
     <b><i><h6>
@@ -176,7 +194,7 @@ function hide(id){
 // bag function 
 function calculate(){
       let items = document.getElementsByTagName("input");
-      let cells = document.getElementsByTagName("tdId");
+      let cells = document.getElementsByTagName("td");
       const donations = 0.4;
       let total = 0;
 	  let totalDonations = 0;
