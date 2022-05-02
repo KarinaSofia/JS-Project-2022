@@ -128,7 +128,7 @@
     <table>
         <tr>
           <td><input type="button" value="Score the quiz"  onclick ="score()"/></td>
-          <td><input type="button" value="Try Again"  onclick ="refresh()"/></td>
+          <td><input type="button" value="Try Again"  onclick ="location.reload()"/></td>
         </tr>
     </table>
     </form>
@@ -152,13 +152,18 @@ let userAnswer = new Array(15);
 			}
 			
 		}
-		window.alert("You got " + count + " questions out of 15 correct.");
+
+    let couponCode = ("SMARTSHARKIES").bold();
+    var message;
+    if(count >= 10){
+      message = "You got " + count + " questions out of 15 correct. Here's your extra donation coupon code: " + couponCode;
+    } else {
+      message = "You got " + count + " questions out of 15 correct.";
+    }
+    
+		window.alert(message);
 		
 	}
-
-  function refresh(){
-    location.reload();
-  }
   
 </script>
 

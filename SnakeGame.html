@@ -21,7 +21,7 @@
 </style>
 </head>
   
-<body >
+<body class="fullscreen">
   <header>
     <h1>Snake Game</h1>
  </header>
@@ -119,10 +119,28 @@ setInt = setInterval(function() {
 }, snake.interval);
 }
 
+function save(finalScore) {
+  if(localStorage.getItem("scores") == null) {
+    localStorage.setItem("scores", finalScore);
+  } else {
+    temp = localStorage.getItem("scores");
+    temp += " " + finalScore;
+    localStorage.setItem("scores", temp);
+  }
+}
+function displayScores() {
+  score = localStorage.getItem("scores");
+  scores = score.split(" ");
+  for(i = 0;i<scores.length;i++) {
+    scores[i] = parseInt(scores[i]);
+  }
+  return scores;
+}
 
 function stopGame() {
 clearInterval(setInt);
 snake.final = snake.score;
+save(snake.score);
 refresh.querySelector("span").innerHTML = snake.score + " Points !";
 setTimeout(function() {
   refresh.querySelector("span").innerHTML = "Refresh";
@@ -132,8 +150,7 @@ discount.classList.remove("hidden");
 
   let finalDiscount = snake.final;
 
-  let code = "HUNGRYSHARKS";
-  let discountCode = code.bold();
+  let discountCode = ("HUNGRYSHARKIES").bold();
 
 
     if(finalDiscount >= 200){
