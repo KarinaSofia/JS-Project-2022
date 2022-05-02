@@ -41,19 +41,6 @@
  <table>
 
   <tr>
-
-    <td>
-      <table style="border: 1px solid;">
-        <tr>
-          <td style="border: 1px solid;"><b>Highscore</b></td>
-        </tr>
-
-        <tr>
-          <td id="highScore" style="border: 1px solid;"></td>
-        </tr>
-      </table>
-    </td>
-
     <td>
  <section class="snakeTable"></section>
     </td>
@@ -133,6 +120,7 @@ setInt = setInterval(function() {
 }, snake.interval);
 }
 
+/*
 function save(finalScore) {
   if(localStorage.getItem("scores") == null) {
     localStorage.setItem("scores", finalScore);
@@ -159,11 +147,12 @@ function displayScores() {
   document.getElementById("highScore").innerHTML = highScore;
   return scores;
 }
+*/
 
 function stopGame() {
 clearInterval(setInt);
 snake.final = snake.score;
-save(snake.score);
+// save(snake.score);
 refresh.querySelector("span").innerHTML = snake.score + " Points !";
 setTimeout(function() {
   refresh.querySelector("span").innerHTML = "Refresh";
@@ -179,6 +168,8 @@ discount.classList.remove("hidden");
     if(finalDiscount >= 200){
       discount.innerHTML = "Way to go, little sharky! You've eaten a total of " + finalDiscount + " fish. What a hungry shark you are. Here's a code to add 10% of your purchase as a donation to sea life. The donation will be used to keep hungry sharks like you, from eating plastic and other toxic substances. Please copy paste this code: " + discountCode;
         }
+
+//displayScores();
   
 
 modul2.classList.remove("hidden");
