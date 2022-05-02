@@ -333,6 +333,19 @@ document.getElementById("comment-box").value = "";
 li.appendChild(text);
 
 }
+
+let redeemButtonFunction = document.getElementById("Redeem");
+
+redeemButtonFunction.addEventListener("click", function(){
+        redeemButton();
+}, false);
+
+function redeemButton(){
+
+    if (redeemButtonFunction.value == "HUNGRYSHARKIES" || redeemButtonFunction.value == "SMARTSHARKIES"){
+        window.alert("Thank you for supporting our company! We will be donating 20$ in your name to our numerous sea life charities! Thank you so much!")
+    }
+}
 </script>
 	 
 </body>
