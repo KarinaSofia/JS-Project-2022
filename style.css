@@ -322,3 +322,7 @@ footer{
     border-style:double;
     border-color:aliceblue;
 }
+form{
+border-style:groove;
+color:white;
+}

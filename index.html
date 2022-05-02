@@ -178,36 +178,31 @@ With your support we can save the remaining sea life!
 </div>
 </div>
 
+<article id="commentArticle">
+    <h2>Comments</h2>
+    <form>
+  <label for="comments">
+    <label for="inputForm">
+      Comment
+    <input type="text" id="comment-box" placeholder="comment here" />
+  </label>
+  
+    <input type="button" value="comment" id="enter"/>
+  </label>
+  
+  </fieldset>
+  </label>
+    </form>
+    <ul id="unordered">
+    </ul>
+  
+    </article>
+  <div id="o1">
+  </div>
+  
 </main>
 
 <article>
-    
-        <h2 class="sub-title">Feedback</h2>
-        <form>
-          <fieldset id="contactinfo">
-            <label for="nameinput">
-              Name
-              <input type="text" id="nameinput" name="name" placeholder="first and last name" />
-            </label>
-            <label for="emailinput">
-              Email
-              <input type="text" id="emailinput" name="email" placeholder="address@example.com" />
-            </label>
-            <label for="phoneinput">
-              Feedback
-              <input type="text" id="feedbackinput" name="feedback" placeholder="enter your feedback" />
-            </label>
-          </fieldset>
-          <fieldset id="submitbutton">
-            <input type="button" value="Submit" id="submit"/>
-          </fieldset>
-       </form>
-     
-<p class="comment"></p>
-
-</article>
-
-
 <br>
 
 <footer>
@@ -302,37 +297,35 @@ function carousel() {
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
   setTimeout(carousel, 2000); 
+
 }
+//Comments
+let functionEnter=document.getElementById("enter");
+functionEnter.addEventListener("click",function(){
+  Print();
+},false);
 
 
-//feedback  
-document.getElementById("submit").addEventListener("click", submit, false);
-	 
-	 
-	 let nameInput = document.getElementById("nameinput");
-	 let emailInput = document.getElementById("emailinput");
-	 let feedbackinput = document.getElementById("feedbackinput");
-	 
-	 
-	 function submit(){
-	 
-	 let name = document.createTextNode(nameInput.value);
-	 let email = document.createTextNode(emailInput.value);
-	 let feedback = document.createTextNode(feedbackinput.value);
-	 
-	 
-	 let paragraph = document.createElement("p");
-	 
-	 
-	 paragraph.appendChild(name);
-	 paragraph.appendChild(document.createElement("br"));
-	 paragraph.appendChild(email);
-	 paragraph.appendChild(document.createElement("br"));
-	 paragraph.appendChild(feedback);
-	 
-	 document.getElementById("comment").appendChild(paragraph); 
-	 }
+//Output
+function Print(){
+//console.log(1);
+let insert =document.getElementById("o1");
 
+//Name
+let inputForm=document.getElementById("comment-box").value;
+let name=document.createTextNode(inputForm);
+
+ //CommentBox
+ let li=document.createElement('li');
+
+ let commentBox=document.getElementById("comment-box").value;
+let text=document.createTextNode(commentBox);
+
+document.getElementById("unordered").appendChild(li);
+
+li.appendChild(text);
+
+}
 </script>
 	 
 </body>
