@@ -267,8 +267,9 @@ h1{
 
     .text {color:seashell;
 		text-shadow: 1px 1px #605f79;
-        text-align:center;
+        text-align:right;
         font-size:200%;
+
     }
 
 .sub-title{color:seashell;
