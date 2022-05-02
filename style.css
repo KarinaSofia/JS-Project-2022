@@ -322,3 +322,7 @@ footer{
     border-style:double;
     border-color:aliceblue;
 }
+article{
+border-style: double;
+color:white;
+}
