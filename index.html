@@ -17,19 +17,11 @@
    <h1> Aqua Gaming</h1>
 </header>
 
-<div class="navSnake">
-
-<a class="active" href="Index.html"><b>Home</b></a>    
-<a class="active" href="SnakeGame.html"><b>Snake Game</b></a>
-<a class="active" href="Feedback.html"><b>Feedback</b></a>
-
-</div>
-
 <div class="column" style="width:75%;">  
     <div class="navSnake">
-        <a class="active" href="Index.html"><b>&nbsp;&nbsp;Home&nbsp;&nbsp;</b></a>    
-        <a class="active" href="SnakeGame.html"><b>&nbsp;&nbsp;Snake Game&nbsp;&nbsp;</b></a>
-        <a class="active" href="Feedback.html"><b>&nbsp;&nbsp;Feedback&nbsp;&nbsp;</b></a>
+        <a class="active" href="Index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>    
+        <a class="active" href="SnakeGame.html">&nbsp;&nbsp;Snake Game&nbsp;&nbsp;</a>
+        <a class="active" href="Feedback.html">&nbsp;&nbsp;Quiz&nbsp;&nbsp;</a>
     </div>
 </div>
 </div>
@@ -42,7 +34,6 @@
     <img class="mySlides" src="sub_01.jpg.jpg"width="100%" height="600" src="Subnauticabz.jpg"  alt="subnautica">
 
 </article>
-
 
 <main>
 <br>
@@ -79,13 +70,13 @@ With your support we can save the remaining sea life!
         <div id="imagedes1" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item1" value="1099" />
         <label for="sub1">Buy Subnautica</label>
-        <p><h5>
+        <p style="margin-left:1%; margin-right:1%;">
             Subnautica is an open-world survival action-adventure video game developed and published by Unknown Worlds Entertainment.
              Players are free to explore the ocean on the alien planet 4546B, after their spaceship, the Aurora, crashes on the planet's surface. 
              The player must collect resources and face creatures to survive.
 
 
-        </p></h5>
+        </p>
         </div>
     </div>
 
@@ -95,13 +86,13 @@ With your support we can save the remaining sea life!
         <div id="imagedes2" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item2" value="1099" />
         <label for="sub2">Buy Subnautica Below Zero</label>
-        <p><h5>
+        <p style="margin-left:1%; margin-right:1%;">
             Subnautica: Below Zero is a survival adventure game set in an open world environment and played from a first-person perspective. 
             Like its predecessor, the player's goal is to explore the environments and survive in an alien environment while also completing objectives to advance the game's plot. 
             Players collect resources, construct tools, build bases and submersibles, and can interact with the planet's wildlife.
 
 
-        </h5></p>
+        </p>
         </div>
     </div>
 
@@ -110,14 +101,13 @@ With your support we can save the remaining sea life!
         width="275" height="350" src="Sea_of_thieves.jpg"  alt="sea of theives">
         <div id="imagedes3" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item3" value="1599" />
-        <label for="sub1">Buy Sea Of Theives</label>
-        <p><h6>
+        <label for="sub1">Buy Sea Of Thieves</label>
+        <p style="margin-left:1%; margin-right:1%;">
             Sea of Thieves is a 2018 action-adventure game developed by Rare and published by Microsoft Studios. 
             The player assumes the role of a pirate who completes voyages from different trading companies. The multiplayer game sees players explore an open world via a pirate ship from a first-person perspective. 
             Groups of players encounter each other regularly during their adventures, sometimes forming alliances, sometimes going head-to-head.
 
-
-        </h6></p>
+        </p>
         </div>
     </div>
 
@@ -127,12 +117,12 @@ With your support we can save the remaining sea life!
         <div id="imagedes4" class="collapsed text" style="font-size:90%;">
         <input type="checkbox" id="item[4" value="1599"/>
         <label for="sub1">Buy Song Of The Deep</label>
-        <p><h6>
+        <p style="margin-left:1%; margin-right:1%;">
             Song of the Deep has the player control Merryn, a 12-year-old girl who loves her father, a fisherman, especially when he tells her tall tales of his adventures. 
             When her father goes missing at sea one day, she has a vision of him being trapped at the depths of the ocean.
              Determined to find him, she crafts a submarine and gear to explore the ocean, and is startled to see that many of her father's tales were actually true
 
-        </h6></p>
+        </p>
         </div>  
     </div>    
 
@@ -140,7 +130,8 @@ With your support we can save the remaining sea life!
 
 <br>
 
-
+<div class="row">
+    <div class="column">
 <input type="button" value="Calculate" id="sButton" onclick="calculate()">
 
 <table class="bag">
@@ -160,6 +151,17 @@ With your support we can save the remaining sea life!
     </tbody>
  </table>
 
+ <h2> Redeem codes </h2>
+ <label for="codeinput">
+    <input type="text" id="codeinput" name="code" placeholder="Redeem your donation here" />
+  </label>
+  <fieldset id="redeembutton">
+    <input type="redeembutton" value="Redeem" id="redeem"/>
+  </fieldset>
+
+</div>
+
+<div class="row">
 <a id="shop" class="text">
     <b>Why shop with us?</b>
 </a> 
@@ -172,55 +174,39 @@ With your support we can save the remaining sea life!
          <i>&copy; Steam</i>
     </p>
     <br>
-
-<div class="row">
-    <div class="column">
-        <center>
-    <input type="button" value="    Calculate your total!   " id="sButton" onclick="calculate()">
-        </center>
-    <table class="bag">
-        <colgroup>
-        <col class="label" />
-        <col class="amount" />
-        </colgroup>
-        <tbody>
-        <tr>
-            <td>Bag Total</td>
-            <td>0.00</td>
-        </tr>
-        <tr>
-            <td>Our Donation</td>
-            <td>0.00</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<div class="column" style="width:75%;">
-    <a id="shop" class="text">
-        <b>Why shop with us?</b>
-    </a> 
-    <div id="divTwo" class="collapsed text" style="font-size:90%;">
-        <p>Aqua Gaming knows how much you like our oceans and gaming! 
-            By buying your favorite games through us, a percentage of your purchase
-            will be donated to organisations that help protect and restore our oceans. 
-            To learn more about the organisations we support head
-            to the About us! section. 
-        </p>
-        <br>
-    </div>
 </div>
 </div>
-<div id="subnauticaDiv" class="collapsed text" style="font-size:90%"> 
-<p>Descend into the depths of an alien underwater world filled with wonder and peril. 
-    Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, 
-    volcanoes, cave systems, and more - all while trying to survive.</p>
-
 </div>
-
-
-
 
 </main>
+
+<article>
+    
+        <h2 class="sub-title">Feedback</h2>
+        <form>
+          <fieldset id="contactinfo">
+            <label for="nameinput">
+              Name
+              <input type="text" id="nameinput" name="name" placeholder="first and last name" />
+            </label>
+            <label for="emailinput">
+              Email
+              <input type="text" id="emailinput" name="email" placeholder="address@example.com" />
+            </label>
+            <label for="phoneinput">
+              Feedback
+              <input type="text" id="feedbackinput" name="feedback" placeholder="enter your feedback" />
+            </label>
+          </fieldset>
+          <fieldset id="submitbutton">
+            <input type="button" value="Submit" id="submit"/>
+          </fieldset>
+       </form>
+     
+<p class="comment"></p>
+
+</article>
+
 
 <br>
 
@@ -231,9 +217,6 @@ With your support we can save the remaining sea life!
         <a href="Snake ">Layout</a> 
         </h6>
 </footer>
-
-
-
 
 
 </body>
@@ -305,11 +288,51 @@ function calculate(){
 		cells[3].textContent = totalDonations.toFixed(2);
    }
 
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+//feedback  
+document.getElementById("submit").addEventListener("click", submit, false);
+	 
+	 
+	 let nameInput = document.getElementById("nameinput");
+	 let emailInput = document.getElementById("emailinput");
+	 let feedbackinput = document.getElementById("feedbackinput");
+	 
+	 
+	 function submit(){
+	 
+	 let name = document.createTextNode(nameInput.value);
+	 let email = document.createTextNode(emailInput.value);
+	 let feedback = document.createTextNode(feedbackinput.value);
+	 
+	 
+	 let paragraph = document.createElement("p");
+	 
+	 
+	 paragraph.appendChild(name);
+	 paragraph.appendChild(document.createElement("br"));
+	 paragraph.appendChild(email);
+	 paragraph.appendChild(document.createElement("br"));
+	 paragraph.appendChild(feedback);
+	 
+	 document.getElementById("comment").appendChild(paragraph); 
+	 }
+
 </script>
 	 
 </body>
 </html>
-
-
-
-

@@ -1,14 +1,19 @@
+body.fullscreen {
+  height: 100vh;
+  overflow: hidden;
+}
+
 h1{
     color:seashell;
-    font-size:300%;
-    text-shadow: 1px 1px #a5c0d4;
+    font-size:400%;
+    text-shadow: 2px 2px #363d3c;
     text-align:center;
   
     }
     
     body{
-        background-color: #3e4056;
-        font-family: trajan, sans-serif;  
+      background-image: linear-gradient(to bottom right, rgb(94, 173, 195), rgb(52, 54, 108));
+        font-family: Courier New, sans-serif;  
     }
 
     main{
@@ -51,13 +56,80 @@ h1{
         z-index: 402;
         right: 0;
         padding: 0;
-        margin: top 100px;
+        margin: top 1000px;
 
     }
     
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-content: center;
+  align-items: center;
+}
+
+[class^="col-"] { padding: 15px }
+
+.col-1 {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+
+.col-2 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+.col-3 {
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
+}
+
+.col-4 {
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+}
+
+.col-5 {
+  -ms-grid-column-span: 5;
+  grid-column: span 5;
+}
+
+.col-6 {
+  -ms-grid-column-span: 6;
+  grid-column: span 6;
+}
+
+.col-7 {
+  -ms-grid-column-span: 7;
+  grid-column: span 7;
+}
+
+.col-8 {
+  -ms-grid-column-span: 8;
+  grid-column: span 8;
+}
+
+.col-9 {
+  -ms-grid-column-span: 9;
+  grid-column: span 9;
+}
+
+.col-10 {
+  -ms-grid-column-span: 10;
+  grid-column: span 10;
+}
+
+.col-11 {
+  -ms-grid-column-span: 11;
+  grid-column: span 11;
+}
+
+.col-12 {
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
+}
+
     #snakeBody {
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         min-height: 100vh;
