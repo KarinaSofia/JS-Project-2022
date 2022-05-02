@@ -150,6 +150,15 @@ With your support we can save the remaining sea life!
        </tr>
     </tbody>
  </table>
+
+ <h2 class="sub-title" style="text-align:left;"> Redeem codes </h2>
+ <label for="codeinput">
+    <input type="text" id="codeinput" name="code" placeholder="Redeem your donation here" />
+  </label>
+  <fieldset id="Redeembutton" style="border: none;">
+    <input type="button" value="Redeem" id="Redeem"/>
+  </fieldset>  
+
 </div>
 
 <div class="row">
@@ -263,6 +272,7 @@ function hide(id){
 function calculate(){
       let items = document.getElementsByTagName("input");
       let cells = document.getElementsByTagName("td");
+
       const donations = 0.4;
       let total = 0;
 	  let totalDonations = 0;
@@ -291,7 +301,7 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 2000); 
 }
 
 

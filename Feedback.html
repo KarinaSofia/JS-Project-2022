@@ -133,6 +133,29 @@
     </table>
     </form>
     
+    <article>
+      <h2>Comment</h2>
+      <form>
+    <label for="comments">
+      <label for="inputForm">
+        Comment
+      <input type="text" id="comment-box" placeholder="comment here" />
+    </label>
+    
+      <input type="button" value="comment" id="enter"/>
+    </label>
+    
+    
+    </fieldset>
+    </label>
+      </form>
+      <ul id="unordered">
+      </ul>
+    
+      </article>
+    <div id="o1">
+    </div>
+    
 </main>
 
 <script>
@@ -164,7 +187,35 @@ let userAnswer = new Array(15);
 		window.alert(message);
 		
 	}
-  
+
+  //Comments
+  let functionEnter=document.getElementById("enter");
+functionEnter.addEventListener("click",function(){
+  Print();
+},false);
+
+
+//Output
+function Print(){
+//console.log(1);
+let insert =document.getElementById("o1");
+
+//Name
+let inputForm=document.getElementById("comment-box").value;
+let name=document.createTextNode(inputForm);
+
+ //CommentBox
+ let li=document.createElement('li');
+
+ let commentBox=document.getElementById("comment-box").value;
+let text=document.createTextNode(commentBox);
+
+document.getElementById("unordered").appendChild(li);
+
+li.appendChild(text);
+
+}
+
 </script>
 
 </body> 
