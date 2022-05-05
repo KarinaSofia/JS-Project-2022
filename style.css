@@ -12,7 +12,9 @@ h1{
     }
     
     body{
-      background-image: linear-gradient(to bottom right, rgb(94, 173, 195), rgb(52, 54, 108));
+      background-image:url(shark_underwater.jpg);
+      background-repeat:no-repeat;
+      background-size: 100% 100%;
         font-family: Courier New, sans-serif;  
     }
 
