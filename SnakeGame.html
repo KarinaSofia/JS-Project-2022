@@ -122,35 +122,6 @@ setInt = setInterval(function() {
 }, snake.interval);
 }
 
-/*
-function save(finalScore) {
-  if(localStorage.getItem("scores") == null) {
-    localStorage.setItem("scores", finalScore);
-  } else {
-    temp = localStorage.getItem("scores");
-    temp += " " + finalScore;
-    localStorage.setItem("scores", temp);
-  }
-}
-function displayScores() {
-  score = localStorage.getItem("scores");
-  scores = score.split(" ");
-  for(i = 0;i<scores.length;i++) {
-    scores[i] = parseInt(scores[i]);
-  }
-
-  let highScore = 0;
-  for(i = 0;i<scores.length;i++) {
-    if(scores[i] > highScore){
-      highScore = scores[i] 
-      }
-  }
-
-  document.getElementById("highScore").innerHTML = highScore;
-  return scores;
-}
-*/
-
 function stopGame() {
 clearInterval(setInt);
 snake.final = snake.score;
