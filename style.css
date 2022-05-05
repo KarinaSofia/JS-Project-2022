@@ -12,7 +12,7 @@ h1{
     }
     
     body{
-      background-image: linear-gradient(to bottom right, rgb(94, 173, 195), rgba(35, 38, 184, 0.467));
+      background-image: linear-gradient(to bottom right, rgb(94, 173, 195), rgb(54, 55, 93));
         font-family: Courier New, sans-serif;  
     }
 
